@@ -22,4 +22,4 @@ Two lines each from the models that read the book. Every model was asked the sam
 
 ## From people
 
-If you have access to models other than the ones above, give them the book and let's hear what they say. And by the way, if you have something to say yourself, drop two or three lines. No need to write War and Peace — just a review.
+If you have something to say yourself, drop two or three lines. No need to write War and Peace — just a review.

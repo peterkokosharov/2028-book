@@ -51,7 +51,7 @@ And there was the sample configuration, the file I was inviting strangers to cop
 network address the machine had, with the password line commented out. Anyone who copied it and sat down in a café
 would be offering their keys to every other laptop in the room.
 
-The reviewer thought this was news. It was not news to me. I will come to the library.
+The reviewer thought this was news. It was not news to me. I had already paid for it once.
 
 The review ended by saying that the core idea was sound and small, and that the project's trouble was not that it did
 too little. It was that it did several things and did not know which of them it was.
@@ -85,7 +85,7 @@ meant. It took eleven minutes. It had been on my list for nine weeks.
 The hardest part was not code. I wrote down what worked. Not what I hoped worked: what I
 had seen work, on which machine, on which date, with which versions. It was a short list. One operating system, tested.
 One client, in a terminal. Three providers, each with a note on what I had actually tried. Everything else went under
-a heading "Not tested", which grew longer than the list above it, and that was right.
+a heading "Not tested", which grew longer than the list above it, and that was right. It was the post from Helsinki again: what runs, on what, and no promises.
 
 Then I wrote a five-minute test and put it in the repository: six commands anyone could run, with the output they
 should see, from starting the proxy to finding the call in the log with its tokens and its cost. If all six happened,

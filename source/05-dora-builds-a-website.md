@@ -74,6 +74,50 @@ I sat on the customers' stool, the one with a split in the vinyl, and realised t
 Helen left that I had spent in a room with somebody else in it, doing a thing together, with the light on. I did not say so.
 It is not the kind of thing you say in a shoe repair shop.
 
+She had made tea, in two mugs from the shelf behind the heels, and lit a cigarette. I had the customers' stool, the one with a split in the vinyl. The door stood half open for the smoke. The ashtray was the lid of a polish tin.
+
+"And before 1996?" I said.
+
+She did not look up. She was writing the price of a heel.
+
+"The works. Twenty years."
+
+She did not say which works, and I did not ask.
+
+"Watches," she said. "I set the movements. Under a lens, all day, with tweezers. Twelve hundred a month."
+
+"And then?"
+
+"Then a letter." She wrote the price of a zip. "And a box for my things. And a clock."
+
+"A clock."
+
+"For the wall. With the director's signature on the face. So I'd remember who."
+
+She pointed with the cigarette at the back wall, without turning round. I had waited in that shop a hundred times and never looked at it. A round clock, a cream face, a signature in gold, too small to read from the stool. Under it, in plain capitals I could read: FOR LONG AND LOYAL SERVICE. Dust lay along the top of the frame, and a cobweb ran from it to the wall. The hands said twenty past four. They had said it for a long time.
+
+"I didn't want it at home," she said. "Five pounds, a clock like that, in the Chinese shop. The engraving cost twenty. I'd have engraved it better myself. Throw it out? Five pounds is five pounds."
+
+She tapped ash into the polish tin.
+
+"The money they gave me paid for this shop," she said. "The lens I took from the works. Nobody asked for it back."
+
+She still has it. It lives in the drawer under the counter, with her phone, and she uses it on the teeth of keys. She wipes it before she puts it back. There is not a mark on the glass.
+
+"You sell batteries," I said.
+
+"Two shelves."
+
+"It doesn't want one?"
+
+"It wants one." She put the cigarette out in the lid. "Twelve hundred a month I set for them, and every one of them ran. Let it stand. Let it see how it feels."
+
+She went back to her paper. My tea had gone cold some time before. I kept the mug. It was the first evening since Helen left that I had spent in a room with somebody else in it, doing a thing together, with the light on. I did not say so. It is not the kind of thing you say in a shoe repair shop.
+
+Above her head the clock said twenty past four, as it does now.
+
+I sat on the customers' stool, which was my place now, and spelled out the next command.
+
 A folder. Git, to give the folder a memory. A brief for the agent, which she dictated and I tidied: only the facts in
 the file, plain pages, phone first, one step at a time and then stop. Then the first snapshot, before any website existed. She asked why we were saving nothing.
 
@@ -117,10 +161,7 @@ Then she asked the clerk to make the opening hours "stand out". It produced a fl
 
 We watched it flash for a while in silence, as you watch a car alarm in the street at night, waiting for someone
 whose responsibility it is. Then I showed her the command that throws away everything since the last snapshot. She
-typed it. The box was gone. She sat back and looked at the screen with an expression I had last seen on her face when
-the council lost a court case about parking.
-
-"Where was that forty years ago," she said. "Forty years I could have used that. My whole marriage."
+typed it. The box was gone. She sat back and looked at the screen.
 
 She used it three more times that evening, once on purpose and twice to see it work again.
 
@@ -156,7 +197,7 @@ Dora closed the session and started a new one, and for this one I pointed the wo
 different company. It got no history, only a reviewer's brief: you did not build this; change nothing; check every
 fact and number against the content file, character by character; report a numbered list.
 
-Dora watched it work with her arms folded. "A second clerk. To check the first clerk. Like the taxman." I said it
+Dora watched it work with her arms folded. "A second clerk. To check the first clerk." I said it
 was more like asking a customer from another street to read your price list before you hang it in the window. She said
 nobody from another street would ever read her price list, because nobody from another street could be trusted with
 her prices. But she did not stop it.
@@ -189,7 +230,7 @@ a key blank that did not have one.
 "Like that," I said. My own contract ran a year at a time. The notebook was in my bag.
 
 She made the account, with the e-mail address the site offers to hide the real one; she took it with the satisfaction
-of somebody who has just been told she may give a false name to a bureaucrat, legally.
+of somebody handing out a key that opens the front door and not the drawer.
 
 Then one command to send the snapshots up, a minute of waiting. She went out of the shop, onto the pavement,
 turned off her wireless so that she would see what strangers see, and opened the address on her phone. The shop front appeared, the narrow door, the hand-painted
@@ -201,11 +242,11 @@ We did not add a contact form. We did not add anything to count her visitors.
 
 ## Customers
 
-Four evenings. About three hours of actual work, the rest being tea, interruptions and the government. One page, a
+Four evenings. About three hours of actual work, the rest being tea, interruptions and heels. One page, a
 stylesheet and a photograph, with nothing on it that is not true.
 
 On the fifth day a woman came into the shop and said she had found it on the internet. Dora told me this on the stairs
-with the restraint of someone reporting a minor miracle in a country where miracles are taxed.
+with the restraint she keeps for a watch that has started again: pleased, and listening for it to stop.
 
 She borrowed the laptop for a month. Then she went to the man behind the tyre shop, without telling me, and came back
 with one of her own: grey, heavier than mine, with a sticker on the lid from a company that no longer exists. She made
@@ -213,15 +254,45 @@ me sit beside her while she set up the workshop on it, from the sheet of steps I
 she typed every line of that too, and when it worked she gave me my laptop back with a packet of chocolate biscuits, which in her
 economy is a formal receipt.
 
+In the winter a young man came in out of the sleet with a tablet held against his chest like a hymn book. I was on the customers' stool, waiting for a watch battery.
+
+He was not a customer. He was from a company that lists businesses, and he was pleased for her. Her website had been noticed, he said; the shop had been picked up. He turned the tablet round on the counter so that she could see.
+
+It was a page about the shop. It had her name, her street, and a photograph of the door taken from across the road, in summer, by somebody she had never met. Under it was a paragraph she had not written. She read it with her finger, and stopped once, at a word, and went on.
+
+Under the paragraph there were stars. Three, and most of a fourth. Four reviews.
+
+"Who are they?"
+
+The young man said they were customers.
+
+"Name me one."
+
+He could not; they had initials. One had written "ok". One had written that the shop was hard to find. The shop is directly under my flat.
+
+"Three point eight," said Dora. "Four people I never saw, giving me marks. My husband at least had his trousers off first."
+
+The young man went pink and moved on to the part he had come for. The page could be verified. For a small monthly amount she could correct the description, answer the reviews, and have a green tick beside her name, so that people would know the page was really hers.
+
+"It is really mine," she said. "It's got my door on it."
+
+He said he understood. He said it was generated automatically, from public sources, and that he could not change it himself. Only the owner could, through the account.
+
+"So you made the shoe without my foot in it," said Dora, "and now I pay you every month to let me stand in it."
+
+He asked whether she would like to think about it, and put his card on the counter.
+
+She did not pick it up. She finished my battery first, pressed the back of the watch shut with her thumb, held it to her ear and gave it to me. Then she took the card, folded it once, and pushed it under the short leg of the key-cutting machine, in place of the folded bus ticket that had been there for as long as I have lived upstairs. She cut a key to see whether the machine still rocked. It did not.
+
+The page is still up. It has six reviews now. It still says orthopaedic.
+
 The next spring the man from the key kiosk at the station came into her shop. I was there, waiting for a heel. He was a
 large man in a small jacket, and he stood just inside the door, as if the shop might charge him for coming further. His
 daughter had shown him Dora's website on her phone. He wanted one. He asked who had made it, and looked at me.
 
-"I did," said Dora. He went on looking at me. "I did," she said again, in the voice she uses for the government.
+"I did," said Dora. He went on looking at me. "I did," she said again, in the voice she uses for customers who want a heel by tomorrow morning.
 
-He asked what she would charge to make him one. She put down the boot she was holding. "Charge? I don't make websites, what am I, a company? You make it. You sit there, on my laptop, and I tell you what to type, and you type it, and when it breaks you don't come running to me at seven in the morning, you know where to look. And you bring your own tea."
-
-He laughed, which is not the same as saying no. They did it on Tuesdays after closing, the two of them at her counter,
+He laughed, and did not leave. They did it on Tuesdays after closing, the two of them at her counter,
 his thick fingers on her keyboard, her voice spelling out commands. I was not invited. I heard about it on the stairs.
 His first content file said "The best prices in the city". She sent him to the window to read her price list, and he
 came back and took the line out himself, and wrote "Keys cut while you wait", which was true.
@@ -233,7 +304,25 @@ with a phone could see it. Two of her regulars went to the station. She told me 
 
 "I could." She did not. "They'll come back when the key doesn't turn."
 
-One of them did. The other did not, and she did not mention him again.
+One of them came back in May, on a wet Thursday. He had a padlock from his allotment shed in a carrier bag, and in the padlock a key that went in and would not turn.
+
+He put the original on the counter beside it. He did not say where the copy had come from. Dora did not ask.
+
+The machine screamed. She put the new key into the padlock, and it turned.
+
+She charged him the price on her website, to the coin, and wrote him a ticket. He paid without a word.
+
+At the door he turned round and said that it was raining.
+
+Dora looked past him at the street, as if it needed checking.
+
+"It is," she said.
+
+When he had gone she dropped the station copy into a tin under the counter. There were other keys in it already, not many.
+
+"Every key fits at the counter," she said, and put the lid back on.
+
+The other one did not come back, and she did not mention him again.
 
 A month after that she changed her Saturday hours. She did not call me. She opened her laptop, started a session,
 asked the clerk for the change, read it with her finger, compared, saved and published. The new hours were on the website by Sunday night; on the door, in her own hand, on the back of a shoebox lid, they had been up since Friday.

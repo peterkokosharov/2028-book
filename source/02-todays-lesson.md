@@ -112,7 +112,7 @@ type faster than anyone in the building.
 I spent the weekend on it with the agent. By Sunday night there was one change: a new client, twelve old ones
 removed, three hundred files touched, every test green. On Monday I put it up for review as "a simplification".
 
-Steven, from the next desk, ran three agent sessions at once and was the first person in the building to call them
+Steven ran three agent sessions at once and was the first person in the building to call them
 "my team". He scrolled for a while with his chin on his fist. Then he sat back.
 
 "Big push, big shit." Not unkindly. Back to his own screen.

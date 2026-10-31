@@ -27,7 +27,8 @@ On a Kindle: send `2028.epub` with Send to Kindle (by e-mail, the app, or amazon
 11. [Emil, year 3](source/06b-emil-year-3.md)
 12. [Afterword](source/90-afterword.md)
 13. [Reviews](source/91-reviews.md)
-14. [Thanks](source/92-thanks.md)
+
+*Thanks & Bibliography are kept in source/92-thanks.md as a personal note and are not included in the published edition.*
 
 ## Talk about it
 

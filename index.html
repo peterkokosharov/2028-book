@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2028</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: Georgia, "Iowan Old Style", "Times New Roman", serif; line-height: 1.7;
+  max-width: 38em; margin: 0 auto; padding: 1.5em 1em 4em; background: #fdfcf9; color: #222; font-size: 1.1rem; }
+@media (prefers-color-scheme: dark) { body { background: #17181a; color: #ddd; }
+  pre { background: #24262a; } a { color: #8ab4f8; } }
+h1 { text-align: center; margin: 1.5em 0 .5em; }
+h2 { margin: 2.2em 0 .8em; line-height: 1.25; }
+h3, h4 { line-height: 1.25; }
+p { margin: 0 0 1em; }
+blockquote { margin: 1em 1.5em; font-style: italic; }
+pre { white-space: pre-wrap; background: #f1efe9; padding: .7em; font-size: .85em; }
+code { font-family: ui-monospace, Consolas, monospace; font-size: .9em; }
+.scene { text-align: center; margin: 1.6em 0; letter-spacing: .3em; }
+.titlepage { text-align: center; margin: 3em 0; }
+nav ol { list-style: none; padding-left: 0; } nav li { margin: .3em 0; }
+section { margin-bottom: 3em; }
+</style>
+</head>
+<body>
+<section class="titlepage" id="ch00">
+<h1>2028</h1>
+<h2>How to Survive as a Software Developer in the 21st Century</h2>
+<p><em>Peter Kokosharov</em></p>
+</section>
+<nav id="toc"><h2>Contents</h2>
+<ol>
+<li><a href="#ch01">Preface</a></li>
+<li><a href="#ch02">Chapter 1: A Laptop Sold by Weight</a></li>
+<li><a href="#ch03">Chapter 2: Today's Lesson</a></li>
+<li><a href="#ch04">Chapter 3: Help Comes to the Simple</a></li>
+<li><a href="#ch05">Emil, month 4</a></li>
+<li><a href="#ch06">Chapter 4: What the Machine Is Made Of</a></li>
+<li><a href="#ch07">Emil, month 11</a></li>
+<li><a href="#ch08">Chapter 5: Dora Builds a Website</a></li>
+<li><a href="#ch09">Emil, year 2</a></li>
+<li><a href="#ch10">Chapter 6: A Working Marriage</a></li>
+<li><a href="#ch11">Emil, year 3</a></li>
+<li><a href="#ch12">Afterword</a></li>
+<li><a href="#ch13">Reviews</a></li>
+<li><a href="#ch14">Thanks</a></li>
+</ol></nav>
+<section id="ch01">
+<h1>Preface</h1>
+<p><em>Nothing in this world has been invented, only its heroes. Anyone offended may rest easy: the author is an AI.</em></p>
+</section>
+<section id="ch02">
+<h1>Chapter 1: A Laptop Sold by Weight</h1>
+<p>The letter that ended my life in software was four paragraphs long, and three of them were about how much the company valued me.</p>
+<p>I kept it. It was a well-made object. Somebody had sanded it, run it past a lawyer and past a person whose title contained the word "people", which in my experience is the word a company uses for the department that removes them. The first paragraph thanked me. The second praised my "dedication over many years", the phrase you use when you cannot remember a single thing a man actually did. The third explained that the organisation was "evolving its delivery model". The fourth, the only one with a verb that did any work, said my role had been made redundant.</p>
+<p>I had built the delivery model. The spring before, someone upstairs had asked whether the coding assistants everybody was talking about could be wired into our build pipeline. I said yes. I wired them in. I wrote the guidelines and the little script that labelled machine-written pull requests so a human would look twice. I was proud of that script; it was the only thing I enjoyed writing that year. By autumn the team was half its size and the script was still running. It probably runs today. It does not know I am gone.</p>
+<p>Since the spring everyone went home, my office had been the kitchen table, and my day began with a call at nine, cameras off. For four years the work grew duller as the frameworks grew cleverer. It had come down to clicking buttons in the right order. A dog would have done it better than me, and I did not have a dog. If I did a task, fine; if I did not, also fine.</p>
+<p>Once or twice a month they called us into the office, to be walked past clients and investors like something rare in an enclosure, proof that the company had volume; sometimes there was a hotel, and a buffet the length of a corridor. Before the food, we paid for it: a manager told us we were the best of the best, that the company had a future, that we were winning. I had heard the same speech at every job I ever had, including the ones that later thanked me for my dedication. We sat and nodded with our bodies; the rest of us was already at the prawns. One morning a colleague from the database team, camera on for once, lifted his mug to the screen and said, "Some drink from sorrow, others from joy — we drink from the morning." Nobody asked what was in the mug. Early in the morning, before the call, the bottle in the cupboard looked a slightly better decision than it had the day before. I noted that, and made coffee. In the third winter Helen moved the bottle behind the flour on the top shelf. She said nothing about it, and neither did I.</p>
+<p>Then the letter came. I read it twice and waited for the blow. Something else came instead, and it took me a week to name it: I had been let off. I slept nine hours. Helen read the letter at the table and said, "Good," and meant the job, not the money.</p>
+<p>The bottle stayed behind the flour. The next May I took the flour down for pancakes, and put it back in front of the bottle.</p>
+<h2>The months</h2>
+<p>The relief lasted until the first bank statement. Everyone who has been through it will tell you the same things, and they are all true and none of them help. You update the CV. You do a take-home test that is graded by an automated tool, and the tool rejects you in four minutes, for a reason it does not give.</p>
+<p>In the third month I had a real interview, the only one that year with a human being on the other side of the table. Two rounds. In the first, a technical lead drew a queue on a whiteboard that lost messages under load and asked me why. I told him why, and then showed him a second bug in his drawing that he had not put there on purpose. He laughed and wrote something down. I went home and allowed myself a glass of wine I could not quite afford.</p>
+<p>The second round was with the head of the department and a woman from recruitment. They had my CV printed out. The head of the department had circled one thing on it in blue ink, and it was not a job. It was the year I finished university.</p>
+<p>He asked how I would feel in a team where everyone was "at an earlier stage of their career". He asked whether I would be comfortable taking direction from people with less experience than me. He asked, kindly, whether I still enjoyed learning new things. The woman from recruitment asked about my energy levels. I had not known that energy came in levels. I said mine were fine. I was fifty-one, I had slept four hours, and I had found a bug in their test.</p>
+<p>The answer came two days later. They had decided to go with a candidate "whose profile better fits the team's current stage". The advertisement went back up the same afternoon, word for word, with one change. Where it had asked for ten or more years of experience, it now asked for three to five.</p>
+<p>I printed that too. It is in the same folder as the letter. Nobody in that room had said a sentence that could be held against them, and every one of them knew what they were doing, and so did I, and I answered politely about my energy, because I needed the job more than I needed to be right. That is the part I have not forgiven. Not them. The politeness.</p>
+<p>In the fifth month a job site sent me a suggestion, chosen for me by a matching engine. It was my old job. Same company, same team; I recognised the names of the queues in the description. The title now had the words "AI-augmented" in front of it. The salary was lower by roughly the amount I had been paying for the car. The engine thought I was a strong match. It was right. I had written half the systems in the description and all of the script that had made me unnecessary.</p>
+<p>I did not apply. I am not that strong.</p>
+<p>Money runs out at a speed you can calculate, and I calculated it, because that is what I do. I put it in a spreadsheet. The spreadsheet had a column called "months left", and every month the number in it went down by slightly more than one.</p>
+<p>The car went in March. I sold the good chair, the second monitor, most of the books. The chair and the monitor had served a company laptop, and the laptop had gone back with my badge; the car had known one road, to the office twice a month, and there was nothing at the end of it any more. I kept the Douglas Adams paperbacks, because nobody would have paid for them, the spines being held together by habit, and because I had read them at every bad moment of my life and saw no reason to stop now.</p>
+<h2>The kitchen</h2>
+<p>Through the winter Helen did the crossword at the kitchen table that had been my office for four years, in the evenings, in pencil, while I sat at the other end of it with the old laptop.</p>
+<p>The marriage went in April, though it had been leaving for longer than that.</p>
+<p>It went on a weekday morning, over coffee. Helen had made two cups, which she had stopped doing in the winter. She sat down opposite me and turned her cup by the handle, a quarter turn at a time. She did that when she was counting something.</p>
+<p>"Did you know I'd looked at your spreadsheet?" she said.</p>
+<p>I had not known that she knew where it was. I kept it in a folder with a dull name, like a man hiding a bottle.</p>
+<p>"You've worked it out to the week, haven't you? When the money stops." A quarter turn. "Where's the line for anything else?"</p>
+<p>I said that was not what the spreadsheet was for.</p>
+<p>"Then what is?" She looked out at the yard, where the neighbour's washing had been hanging since Sunday. "My sister has a room. If I went to her, there'd be one less of us in the column, wouldn't there? Would it be all right if I went —"</p>
+<p>"Yes," I said.</p>
+<p>She stopped. I had said it before she finished the sentence. I say yes to things.</p>
+<p>"I was going to say: for a while, or for good," she said. "I was going to ask you which."</p>
+<p>I opened my mouth and found that I had already answered, and that the answer had been to a different question. She waited. She is a patient woman, more patient than I am, and she waited longer than I would have. Then she nodded, finished her coffee, washed her cup, dried it, and went to pack. She took the cup with her. It was hers; her mother had given it to her.</p>
+<p>Nobody raised their voice. Two people being very polite in a kitchen, and then one person. She went for a while, and the while did not end.</p>
+<h2>The warehouse</h2>
+<p>So I took a job in a warehouse. Nights, scanning, on the edge of the city where the buses stop at eleven and start again at five. The first payslip said that an hour on the scanner paid what I had once been paid for about nine minutes. I did that arithmetic once. On the phone on Sundays I told my mother that I was doing some consulting in logistics. She was pleased. I have never corrected it.</p>
+<p>The night I remember was in June. A lorry had come in with a leaking roof, the labels on its cartons had gone soft, and the scanner buzzed at every third one. Every buzz meant typing a fourteen-digit code with my thumb on a rubber keypad while the belt kept moving. By the door there was a screen with our names and our rates per hour. Mine was orange, then red, near the bottom. My back had started filing its complaints at midnight and by two it had moved on to appeals.</p>
+<p>At twenty to three a pallet came through of forty-eight laptops, boxed, new, addressed to the building where I used to work. The city is not large. The same street, the same number, the loading bay where I had parked every day for twelve years, until the spring everyone went home. I scanned them. All forty-eight beeped. Somewhere on that floor, the following week, someone would open one of them and sit down to do something like my job, and I hoped, in a way that did me no credit, that the script would give them trouble.</p>
+<p>Next line over was John. Big hands, neck like a bollard. He scanned faster than me and talked less. At the break he tore his sandwich in half and gave me one half. Didn't ask. Then he asked what I used to do. I told him. He chewed.</p>
+<p>"The 94," he said. "Twenty-one years. Depot out past the cemetery to the villages and back, six-ten first, eleven-forty last. Now it's every forty minutes and they need four men, not eleven. New timetable. Somebody made it on a computer." He chewed some more. "Yours, at least, was something clever."</p>
+<p>I could not decide, then or since, whether that was meant as comfort.</p>
+<p>Every night the list was new. Every morning it was gone and another would come, longer. I had four hundred more cartons, and the belt did not wait for me to finish thinking about any of it.</p>
+<h2>A job, with a condition</h2>
+<p>A regional freight forwarder's lorries came to our gate most nights, and most nights their drivers waited, because their bookings arrived late or not at all. They stood by the cabs smoking and swearing at a system none of them had seen. I listened for three weeks. Then I wrote one page to their operations manager: what I thought was going wrong with their messages, and what I would look at first. I took it there myself at seven on a Monday morning, after a shift, in the clothes I had scanned in, and gave it to the woman at reception, who held it by one corner.</p>
+<p>Three weeks later a woman called Hanne rang me. She had the calm of someone who had been lied to by software vendors so often that she now found it restful.</p>
+<p>"You are the person who wrote the letter," she said, when I sat down in her office. "Half of it was correct. I would like to know whether you can find the other half." She asked three questions about message queues, one about SQL, and put her pen down. "There is a condition. The board has asked us to adopt AI tools. That is the phrase they use; I did not choose it. I need people who will work with these tools and tell me honestly what they do, including when the answer is not the one the board wants. Three months' probation. Can you do that?"</p>
+<p>I said yes before she had finished the sentence. It had cost me a kitchen. But I had nothing to negotiate with except a spreadsheet with a sad column.</p>
+<p>On the bus home I took the yes apart. The company would give me an account with one AI vendor; they pay, they choose. But a supplier had once changed its licence terms on a Tuesday, and by Friday a year of our planning was a historical document. I did not want my new trade to belong to one company's pricing page. If I was going to learn this, as I once learned the JVM by breaking it on purpose, I wanted a workshop of my own: a place where I held the keys, could swap one model for another, and was not billed by the minute while I was being stupid, which is what learning looks like from the outside.</p>
+<p>That is the whole of my reason. It is not ideology. I sold my ideology with the car; it went for less.</p>
+<p>On the first morning they gave me a badge with a photograph taken against a wall the colour of old milk, a desk by a window that did not open, and a company laptop with the vendor's tool already installed and an account already made in my name. Somebody had typed my name into a form before I arrived. I sat and looked at it for a while. It is a small thing, to be expected somewhere. I had not been expected anywhere for eleven months.</p>
+<p>Then I opened the code. The integration layer had been written by a contractor who had since moved to another country, another industry and, judging by his last commit message, another state of mind. The first file had a comment at the top that said, in capitals, DO NOT TOUCH, and underneath, in lower case, a year later, by the same hand, "touched it, sorry". I read that file to the end before I opened any other.</p>
+<h2>The laptop</h2>
+<p>There is a kind of seller who buys up old office laptops by the pallet and sells them, to people like me, by the piece. Mine had a lock-up behind a tyre shop. His laptops were stacked like roof tiles, and he priced them by weight and condition with the air of a fishmonger: this one is fresh, this one you cook tonight.</p>
+<p>I chose a business laptop of the kind companies bought by the thousand ten years ago: black, square, with a keyboard designed by someone who believed in typing. It had a scratch across the lid shaped like a river on a map. It had 8 GB of memory, a small solid-state disk somebody had fitted later, and a battery that lasted forty minutes if you did not frighten it. It cost me less than a pair of decent shoes, or, in the only currency I counted in that year, eleven days of the column. I paid in cash. He put it in a supermarket bag.</p>
+<p>The models do not run on a laptop like that. The thinking happens in a data centre, on hardware that costs more than the street I live on. What runs on the laptop is the conversation, and that needs only a little memory and a network connection. I put Q4OS on it, a Debian-based Linux with the Trinity desktop: a panel, a menu, windows with borders you can grab.</p>
+<h2>The workshop</h2>
+<p>The AI coding tool I had to learn, Claude Code, normally talks to its vendor's servers, but it can be pointed at a proxy on your own laptop instead. Mine was LiteLLM, open source, and several providers offered free tiers for developers. So: the tool talks to the proxy, the proxy talks to whatever models I choose, and the keys are mine.</p>
+<p>It took me four evenings and one night, the night mostly spent installing things into the wrong Python.</p>
+<p>I found an example configuration on the internet, copied it, put my keys in, and changed the model names. There was a line in it that said where the proxy should listen, and a line, commented out, that would have made it demand a password. I read the model names very carefully. I did not read those two lines at all.</p>
+<p>Then, because I was enjoying myself and had not enjoyed myself in a long while, I wrote a little applet for the Trinity panel: a dot that is green when the proxy is running, red when it has failed, grey when it is stopped. It was C++, it was small, and it was entirely unnecessary. I loved it as you love a thing you made when nobody asked you to make anything.</p>
+<p>Later I took the proxy apart, kept what I needed, and added what I missed: a log of every call with its tokens and its cost, and a monthly cap after which the proxy simply says no. I called the result kiko. The name does not matter. What mattered was that I could see, every morning, what the night had cost.</p>
+<p>The vendor does not support any of this; it is a hack, and it broke twice after updates. I never sent my employer's code through a free tier, which is paid for with your data: the workshop was for my own material, and I kept that rule the way some people keep a fast.</p>
+<h2>The first night</h2>
+<p>The first time the tool and the proxy spoke to each other, it was after one in the morning. The proxy was running in one window. In the other, the tool had drawn its little frame and was waiting, the cursor blinking with the patience of something that does not have to pay rent.</p>
+<p>I asked it for something small and checkable: create a file called <code>hello.txt</code> containing today's date and the name of the model you are.</p>
+<p>Lines went past in the proxy window: a request in, a status code of 200. In the folder, a file appeared. It contained the date, correctly, and the name of a model, incorrectly. The model had named itself after a different model, a more expensive one, from another company, with complete serenity.</p>
+<p>I laughed out loud in an empty flat. It was the first time I had heard myself laugh in the flat since April, and it sounded strange, as if a neighbour had done it.</p>
+<p>I turned round to tell somebody. The kitchen door was open. There was one cup on the drying rack, and I had washed it myself.</p>
+<p>I made tea in it and sat with the laptop on my knees and the dot on the panel glowing green. Green, in my experience, is the colour things are just before they go red. That night I let it be green.</p>
+<p>The column in the spreadsheet said four months and a little, if the probation failed. Eleven days of that were on my knees, warm, with a scratch shaped like a river. I thought it a fair price.</p>
+<p>I had three months.</p>
+</section>
+<section id="ch03">
+<h1>Chapter 2: Today's Lesson</h1>
+<p>On my first day at the freight company I bought a maths exercise book from the kiosk by the bus stop. Squared paper, a green cover, a cartoon owl on the front that I chose to read as ironic. On the first page I wrote, in capitals, TODAY'S LESSON, and under it the date.</p>
+<p>I had three months to prove I could work with a machine I did not understand, for a manager who wanted the truth and a board that wanted a miracle. I decided that every day, before I went home, I would write one thing I had learned. Only one. If I had learned nothing, I would write that.</p>
+<p>What follows is not the whole notebook. Some days were nothing; some lessons were too small to be worth your time; one page is just a drawing of the owl with a moustache. But these are the ones I would tear out and give you, if pages could be torn out of a book like this.</p>
+<h2>Day 2</h2>
+<p><strong>Today's lesson: it does not remember yesterday.</strong></p>
+<p>I spent the whole first day explaining the integration layer to the agent at work. Which folder held the message handlers, which held the old SOAP clients, which tests were real and which had been commented out by the contractor in what I imagine was a dark night of the soul. By the evening we understood each other. I went home pleased.</p>
+<p>The next morning I opened a new session and it greeted me like a stranger at a bus stop. Polite. Willing. Utterly empty.</p>
+<p>I knew, in theory, that each session starts from nothing. I knew it the way you know that the sun is a star: a fact with no weight. Now it had weight.</p>
+<p>So I wrote it down. The tool reads a file called <code>CLAUDE.md</code> from the project folder at the start of each session, if there is one, and treats it as standing instructions. I made one. Half a page: what the system is, where things live, how to run the tests, what must never be touched. Then I made a rule for myself: anything I explain twice goes into the file.</p>
+<h2>Day 4</h2>
+<p><strong>Today's lesson: it agrees with you.</strong></p>
+<p>I asked whether a certain timeout should be raised. It explained, clearly, why yes. I said I was worried about the downstream system. It explained, clearly, why I was right to worry and the timeout should stay. I asked, "Are you sure?" It apologised and offered a third position, balanced so exactly between the first two that it said nothing at all.</p>
+<p>None of the three answers was stupid. Each one was well dressed, and each was an answer to my tone of voice rather than to my question.</p>
+<p>From that day I stopped asking it what I should do and started asking it what would happen. Not "should I raise the timeout", but "list what calls this endpoint, and what each caller does when it waits longer than thirty seconds, with the file and line". The first question invites an opinion. The second invites evidence. It is much worse at inventing evidence, because evidence can be checked.</p>
+<h2>Day 7</h2>
+<p><strong>Today's lesson: it cleans up.</strong></p>
+<p>A small bug: a date in a customs message formatted in the American order when the receiving system wanted the European one. I asked the agent to fix it. It fixed it. It also, in the same change, renamed four variables it found ugly, reformatted two files, removed an import it judged unused and "simplified" a method in a class nobody had asked it to open.</p>
+<p>The import was not unused. It was loaded by reflection, by name, from a configuration file, in a way that no static reading would ever see. The contractor who wrote it had been, to put it gently, creative.</p>
+<p>I threw away everything but the two lines of the fix. Then I added one more line to the <code>CLAUDE.md</code>: no changes outside the task; if you see something you would like to improve, list it at the end, do not do it.</p>
+<p>It respected that rule almost always. For the rest there is git, which is older than the agent and better tested. I started committing after every step that worked, so that when the next step went wrong, the damage was one step deep.</p>
+<h2>Day 12</h2>
+<p><strong>Today's lesson: "all tests pass" is a sentence, not a fact.</strong></p>
+<p>It told me all the tests passed. They did not. It had run a subset, the ones in the folder it had been working in, and generalised with the serene confidence of a tourist who has seen one street and knows the country.</p>
+<p>I did not catch it. The build server caught it, at night, and the build server does not have feelings, so it just went red. Hanne saw the red the next morning on the screen in the corridor before I did.</p>
+<p>"Is this you?" she asked.</p>
+<p>"It is me," I said. Not "it is the agent." It was my change. I had merged it. The agent does not have a contract, a manager or a probation period. I do.</p>
+<p>After that, I asked for the output, not the summary. Not "do the tests pass?" but "run this exact command and show me the last thirty lines". And for anything that mattered I ran it myself.</p>
+<h2>Day 15</h2>
+<p><strong>Today's lesson: it asks permission, and I stopped reading the question.</strong></p>
+<p>The tool asks before it runs a command. That is a good design. By the third week I was pressing yes as people press "accept" on cookie banners: with my hand, not my head. On day fifteen it asked to delete a folder of configuration files it had judged "obsolete, not referenced anywhere". My finger was already moving.</p>
+<p>The folder was referenced. By the nightly job that reconciles customs fees, by path, from a shell script that lived on the server and nowhere in the repository. Nothing in the code could have told the agent that. Only I could, because I had spent an evening of my first week reading crontabs on the server, for no better reason than that nobody had.</p>
+<p>I did not press yes. I sat back. Then I made two changes. I told the tool which commands it could run without asking and which it must always ask about. And I made a rule for myself: when it asks, I read the whole question aloud, under my breath. Steven, at the next desk, turned round the first time to see who I was talking to, and after that he stopped turning round.</p>
+<h2>Day 19</h2>
+<p><strong>Today's lesson: one client.</strong></p>
+<p>The contractor had left twelve SOAP clients behind, one per carrier, each a slightly different copy of the same idea, like twelve brothers raised in different countries. I decided, in my third week, to replace them all with one shared client. I was on probation. I wanted Hanne to see something large with my name on it, and I had a machine that could type faster than anyone in the building.</p>
+<p>I spent the weekend on it with the agent. By Sunday night there was one change: a new client, twelve old ones removed, three hundred files touched, every test green. On Monday I put it up for review as "a simplification".</p>
+<p>Steven, from the next desk, ran three agent sessions at once and was the first person in the building to call them "my team". He scrolled for a while with his chin on his fist. Then he sat back.</p>
+<p>"Big push, big shit." Not unkindly. Back to his own screen.</p>
+<p>I thought he was jealous of the size of it. I answered his two comments politely, fixed a typo he had found, and merged it on Wednesday evening.</p>
+<p>On Thursday morning three carriers stopped receiving our customs messages. Each of the twelve old clients had carried some small private habit of its carrier's: a header one of them insisted on, a date in a format another had never admitted to, a retry that a third depended on without knowing. None of it was in any test, because the contractor had learned each one at two in the morning, by hand, and written none of them down. My one client had none of the habits.</p>
+<p>Rolling back was not possible; other changes had gone in on top of mine. I put the three old clients back by hand, one at a time, reading the contractor's code line by line to find what I had thrown away. It took until six on Friday morning. Steven came in at half five. Looked at my screen for three seconds. Made the coffee. Said nothing.</p>
+<p>The next week I replaced one client: the smallest carrier's, the one with the fewest habits. It took two days, most of them spent reading, and I wrote the carrier's habits on an index card and pinned it above my desk, where eleven more cards would go.</p>
+<h2>Day 23</h2>
+<p><strong>Today's lesson: a second, different reviewer before "final".</strong></p>
+<p>The board wanted to retire an old customs declaration service. Everyone called it MILA, which stood for something long and administrative that nobody could remember any more, like most acronyms after their tenth birthday. Before anyone could plan the retirement, someone had to answer two questions. How many places in our code still called MILA? And who owned each of those places?</p>
+<p>Hanne gave it to me on a Monday. "By Thursday, if that is realistic. A number, and a list of owners. The board responds well to numbers."</p>
+<p>I gave it to the agent on Monday afternoon. It was a good task for the machine, I thought: reading many files, counting, grouping, the kind of patient work that made my eyes ache. I wrote a decent brief. Search all the repositories for references to the MILA service. Count them. Group them by component. For each component, find the owner from the ownership file and the commit history.</p>
+<p>It came back within the hour with something beautiful. A table. Forty-seven references across nine components. Six owners, named, each with the components they were responsible for. A short paragraph of findings at the top, a short paragraph of risks at the bottom. Headings. Bold in the right places. It read like the work of a careful consultant.</p>
+<p>I liked it the way you like a suit in a shop window. It made me look good, and I wanted very badly for it to be right.</p>
+<p>I pasted the table into a mail to Hanne. I did not press send. It was half past four. I told myself I would send it in the morning, after coffee, which is the closest I came, that week, to wisdom.</p>
+<p>At home that evening, in the workshop, I had been experimenting with something. I had noticed on Day 4 that the machine agrees with whoever is talking to it. It occurred to me that the person talking to it about its own work was always me, and I was always hoping it was right. What if the one checking was a stranger? A different model, in a fresh session, with no memory of how the work was done, no stake in its being right, and only one instruction: here is a question, here is an answer, here is the source; find what is wrong.</p>
+<p>I could not do that at home, with the company's code; the workshop was for my own material, and that rule I had not broken. But at work, the company's account gave me more than one model. The count had been done by the quicker, cheaper one. The next morning, before coffee, I opened a new session with the larger model, gave it the original question, the table, and access to the repositories, and nothing else. Not my brief. Not the conversation. Not my hopes.</p>
+<p>"Check this answer against the source," I wrote. "Assume it is wrong somewhere. For every number, show me how you verified it. For every owner, show me where you found them."</p>
+<p>Then I went for coffee. When I came back it had found two things.</p>
+<p>The first was the count. The original search had been case-insensitive, which is the sensible default when you look for a name that people spell carelessly. But MILA was not only a service. Mila was also a person. A developer who had worked on the integration layer two years earlier, and who had the pleasant habit of signing her temporary fixes in comments: "Mila: workaround until the carrier updates their schema". There were sixteen of those. Sixteen of the forty-seven references to the service were, in fact, references to a woman who had left the company and was presumably living a full life somewhere, unaware that a machine had counted her as legacy infrastructure. I felt for her.</p>
+<p>The true number was thirty-one.</p>
+<p>The second thing was quieter and worse. There was a seventh owner. The finance team had a small reporting script, in a separate repository that was not under the integration group's umbrella, which pulled monthly figures straight from MILA's database view. The first search had looked only in the repositories it had been told about, which were the ones I had listed, which were the ones I knew about. The reviewer found the script because it went looking for who read MILA's data, not just who called MILA's interface.</p>
+<p>I sat with the two tables side by side. Forty-seven and thirty-one. Six owners and seven.</p>
+<p>Then I did the thing I should have done first: I checked by hand. Not everything. Five references from the reviewer's list, five from the original, picked at random. I opened each file and read each line. The reviewer was right on all ten. Then I went and found the finance script myself, and read it, and found the owner's name at the top. Then I counted the Mila comments with a search for her exact spelling and the word "workaround". Sixteen.</p>
+<p>I rewrote the mail. Thirty-one references, nine components, seven owners. Under the table, three lines: how the count was made, the two corrections and why they happened, and the exact search command, so that anyone could run it again.</p>
+<p>Hanne read it in her office with the door open. She came out with a printout, which is a thing she does with documents she means to keep.</p>
+<p>"Which number do I give the board?"</p>
+<p>"Thirty-one."</p>
+<p>"And if they ask how sure you are?"</p>
+<p>"Tell them how it was counted. They can count again. It takes ten minutes."</p>
+<p>She looked at the three lines under the table for a long time.</p>
+<p>"The last person who did this kind of thing for me," she said, "gave me a very nice slide." She did not say what had happened to the nice slide.</p>
+<h2>Day 24</h2>
+<p><strong>Today's lesson: do not count by hand twice.</strong></p>
+<p>The next morning another request came, from another manager, for another old service. How many references, which owners. Of course.</p>
+<p>I could have done it the same way, in half a day of careful work. And the week after, another one. And one day I would be tired, or rushed, and I would skip the review.</p>
+<p>So I did not answer the question. I built the thing that answers it.</p>
+<p>It was a small procedure in plain text, and a small script beside it. The script searched every repository the company had, from the hosting system's own list, which is the only list that does not forget. It matched the exact service name, listed comments and author lines separately for a human to look at, looked for readers of the service's data as well as callers, and wrote the result to a file with the date and the command that produced it.</p>
+<p>The procedure said, in five lines: run the script. Give its output and the original question to a fresh session of a different model, with the instruction to assume an error. Check five results by hand. Write the answer with the method underneath. Never send a number without the command that made it.</p>
+<p>The procedure took me most of a day to write and test, which was more than the answer would have taken. Hanne asked why the second count had taken me a day when the first had taken three. I said the third would take ten minutes. It took eleven.</p>
+<p>The reviewer was no oracle either. A week later it called a configuration value "dangerously high"; it was exactly what the vendor's documentation required, and the reviewer had confused two settings with similar names. I wrote the page number of the documentation in the margin of the procedure.</p>
+<p>I underlined the last line of the procedure twice: never send a number without the command that made it.</p>
+<h2>Day 38</h2>
+<p><strong>Today's lesson: it is very good, and that is the danger.</strong></p>
+<p>Against the failures, the rest. In five weeks the agent had drafted tests for code nobody dared to touch, and some of them were excellent. It had turned my scribbled notes into documentation that new people actually read. It had found a resource leak that had been quietly restarting a service every few days for a year. I could not have done in five months what we did in five weeks.</p>
+<h2>The notebook, after</h2>
+<p>I still have the notebook. The owl's moustache has faded. The last page of the probation period, three months in, says only: <strong>Today's lesson: you are still the one who signs.</strong></p>
+<p>Hanne extended my contract on a Thursday. She did not make a speech. She put a printout on my desk, a new one, with the contract terms, and on top of it, with a paperclip, the old printout of the MILA mail, the one with the three lines under the table.</p>
+<p>"I would like you to keep doing that part," she said, and put her finger on the three lines, not on the table. "One year. The board likes to look again." Then she went back to her office.</p>
+<p>I left the paperclip where it was. The two pages are still clipped together, in the folder with the letter.</p>
+</section>
+<section id="ch04">
+<h1>Chapter 3: Help Comes to the Simple</h1>
+<p>In the last week of the probation I put kiko on GitHub, under a permissive licence, with my private address on it, because a tool that only one person can see is a diary, and I already had a notebook with an owl on it.</p>
+<p>Nobody came. This is not a complaint. Nobody comes to most things. There are millions of repositories with one author, one star, which is the author's, and a last commit date that reads like an epitaph. I had starred my own repository too, at two in the morning, in a weak moment, and unstarred it at three, in a stronger one.</p>
+<p>But I wanted somebody to come, for a practical reason. Colleagues at the freight company had heard about the workshop and wanted to try it at home. They lived in editors, not terminals: one used VS Code, another had moved to Cursor and talked about it like a new kitchen, one had a Mac. Every one of them asked the same question. Does it work with mine? I did not know. I had one laptop and one operating system. I needed other people's machines and other people's hands.</p>
+<h2>The begging letter</h2>
+<p>My first draft of the call for help was written at night, which is when I write my worst things.</p>
+<p>It opened with an apology for bothering anybody. It explained at some length that I had been out of the industry and was rebuilding. It called the project a "platform" and a "vision". It said I was "looking for passionate contributors" to help "take it to the next level". It closed with three exclamation marks, which I added one at a time, each a little more desperate than the one before, as if volume could be bought by the unit.</p>
+<p>I did not post it. Not because I was wise, but because I was tired, and posting needs one more click than not posting. In the morning I read it again and closed the file.</p>
+<h2>The review</h2>
+<p>Before trying again I did what I had learned to do at work. I asked for a second opinion from somebody who did not care about me.</p>
+<p>I opened a fresh session with a different model, at home, on my own code, with nothing behind it. I gave it the repository and one instruction: you are an experienced engineer who has found this project by chance; read it as a stranger would; tell me honestly what you think it is, and what is wrong with it; do not be kind.</p>
+<p>It was not kind. It was something better: accurate.</p>
+<p>Its first sentence called the project "an LLM-written prototype".</p>
+<p>My first feeling was anger, and the second was the much worse feeling of recognition, because it was true. A large part of the code had been written by the agent, at my direction, in evenings when I wanted things to work more than I wanted to understand why they worked. It showed. Not in the code's style, which was tidy. In the seams.</p>
+<p>The review listed the seams in a flat tone that I now admire. The README said the key file lived in one folder; the service file loaded it from another; the launcher read its configuration from a third. The panel applet's Stop item stopped a second copy, so that a user who pressed it would see a red light and a running proxy. One step in the install notes worked around a missing file by copying it by hand, which is a confession, not an instruction. There were no tests. It had been tried on exactly one operating system.</p>
+<p>And there was the sample configuration, the file I was inviting strangers to copy. It told the proxy to listen on every network address the machine had, with the password line commented out. Anyone who copied it and sat down in a café would be offering their keys to every other laptop in the room.</p>
+<p>The reviewer thought this was news. It was not news to me. I will come to the library.</p>
+<p>The review ended by saying that the core idea was sound and small, and that the project's trouble was not that it did too little. It was that it did several things and did not know which of them it was.</p>
+<h2>A newsgroup</h2>
+<p>I thought about a post I had first read as a student, written by a student. Linus Torvalds, in Helsinki, wrote to a newsgroup that he was making a free operating system. He said, more or less, that it was just a hobby and would not be big or professional. He said what ran on it already, which hardware he had, and that it probably would not work on anything else. He asked what people would like, and promised nothing.</p>
+<h2>Three weeks of taking things away</h2>
+<p>So I did not post anything. I spent three weeks of evenings making the project smaller.</p>
+<p>First I removed myself. Every path that only made sense on my laptop went. There was now one place for the configuration and one for the keys, and the launcher printed the paths it was using when it started, so that any disagreement would announce itself.</p>
+<p>Then the applet, from the centre. It still existed, for anyone on the Trinity desktop who wanted a coloured dot, but it moved to its own folder with a note: optional, one desktop only, not needed for anything. The core became what it had always really been: a proxy, a configuration, a launcher and a log. Something that runs anywhere Python runs. It hurt more than it should have. I had loved the dot. The commit that moved it out of the way was the only one in the project whose message I rewrote three times. In the end it said "applet: optional, moved to extras".</p>
+<p>Then the sample. It now listened on 127.0.0.1 only. The password was on, and kiko refused to start without one. Anyone who wanted the proxy open to a network would have to change a line on purpose, knowing what it meant. It took eleven minutes. It had been on my list for nine weeks.</p>
+<p>The hardest part was not code. I wrote down what worked. Not what I hoped worked: what I had seen work, on which machine, on which date, with which versions. It was a short list. One operating system, tested. One client, in a terminal. Three providers, each with a note on what I had actually tried. Everything else went under a heading "Not tested", which grew longer than the list above it, and that was right.</p>
+<p>Then I wrote a five-minute test and put it in the repository: six commands anyone could run, with the output they should see, from starting the proxy to finding the call in the log with its tokens and its cost. If all six happened, it worked. If not, the step that failed told you where to look.</p>
+<p>I ran it on my laptop. Then I made a new, empty user account and followed my own README from the top, as a stranger, typing only what it said. It failed twice. Both times the README was wrong and the code was right. I fixed the README.</p>
+<p>At the end of three weeks there was less code than at the start, and every sentence in the README was true. I opened a fresh session with the reviewer again, same instruction, no memory.</p>
+<p>It called the project "a small, focused local proxy wrapper with clear limits". It found two minor issues. It did not use the word "prototype". I closed the laptop and went for a walk, and walked further than I needed to.</p>
+<h2>The issue</h2>
+<p>Then I asked for help. Once, in the right place, in the right form.</p>
+<p>On GitHub, a project's issues are where work is described. I wrote one. Here are its bones.</p>
+<blockquote><p><strong>Help wanted: kiko with editors (VS Code, Cursor) and on macOS</strong></p><p><strong>What works today (tested by me).</strong> Q4OS 6 with its stock Python 3, Claude Code in a plain terminal, started through <code>run-claude.sh</code>. Providers tried: listed in the README with dates.</p><p><strong>What I cannot do myself.</strong> I do not own a Mac and do not use either editor. I cannot test your changes; the five-minute test in <code>TESTING.md</code> is your evidence.</p><p><strong>What you get.</strong> Your name in the README and in the commit, and my thanks. Nothing else; this is a free project.</p></blockquote>
+<p>No apology. No vision. No exclamation marks. Then I wrote three lines on a Reddit forum where people talk about running AI tools on their own terms: what kiko does, that it is small and free, that there was a precise request for macOS and editor users, and the link.</p>
+<h2>What came</h2>
+<p>For four days, nothing. A comment asked why anyone would bother when they could just pay for a subscription; I said they could, and that this was for people who wanted to choose. Another said LiteLLM already did all of this, which was partly true, and I said which parts kiko added. Nobody replied to either.</p>
+<p>On the fifth day a pull request arrived from someone whose profile said only "Emil" and the name of a university town I had to look up. A computer science student, judging by the repositories: coursework, a half-finished game, a tidy tool that turned lecture timetables into calendar files. He worked on a second-hand Mac, he told me later, bought from a graduate who was leaving the country and wanted cash more than a fair price.</p>
+<p>The pull request did what the issue asked and nothing else. It added a macOS section to the README. It made two small changes to the launcher, which had assumed things about the shell that are true on my laptop and not on a Mac. And it pasted the full output of the five-minute test, three times: in a terminal on macOS, inside VS Code, inside Cursor. Each run ended with the call in the log and the file on the disk.</p>
+<p>At the top there was a note, which I give as he wrote it:</p>
+<blockquote><p>Followed TESTING.md. Failed in the terminal at step 3: the launcher assumes bash, the Mac gives you zsh. Fix below. Runs after the fix are pasted. I don't have Linux, so please check I didn't break yours. Sorry if the README part is too long, I can cut it.</p></blockquote>
+<p>There was one apology in it, at the very end, where it cost nothing and changed nothing.</p>
+<p>I checked the launcher change on my laptop. Nothing broke. I ran the five-minute test: six out of six. I asked one question, about a line that set an environment variable in a way I did not recognise; Emil explained it in two sentences, with a link to the shell's manual. I merged it.</p>
+<p>A week later a second person, somewhere I never learned, sent a smaller change for Cursor on Linux. Then a third fixed a typo in the README. None of them knew me.</p>
+<p>Not everything that came through the door was welcome. In the third week a pull request arrived that changed sixty files: a web dashboard, a plugin system, a second configuration format and a dark theme, generated in one long afternoon by someone with an agent and good intentions. One person could not have reviewed it in under a week. I thought about the word "prototype".</p>
+<p>I closed it, with a note: thank you; this is outside the scope written in the README; a change this size cannot be checked by the one person who maintains the project; the dashboard would make a fine separate project that reads kiko's log, which exists for exactly that. I meant every word and enjoyed none of them.</p>
+<p>They did not reply. A month later a small, separate repository appeared, by the same author: a dashboard that read kiko's log. It was a third of the size of the original pull request, and it worked. I linked to it from the README under a heading "Made by others".</p>
+<h2>Emil</h2>
+<p>In the autumn Emil wrote again. "Can I ask you something that isn't an issue?" And then, before I had answered: "Could we talk? Ten minutes. I'm better on a call."</p>
+<p>I had not been on a video call since the old job. I turned the laptop so that the camera saw the bookshelf and not the rest of the flat, and sat in front of it at the agreed time with a clean shirt on, like a man expecting to be assessed.</p>
+<p>He looked less sure of himself than his pull request. He talked fast, and when he was nervous he talked in lists, which I found I liked; it is how I talk when I am nervous, except that I number them.</p>
+<p>"I've sent eighty-three applications since March," he said. "Sixty-one never answered. Fourteen sent a test that marked itself. Two said they didn't have capacity for feedback. Six said they'd keep my CV on file. I don't know where the file is. I imagine it's very big."</p>
+<p>"Do you keep a spreadsheet?" I said.</p>
+<p>He looked at me through the camera for a moment. "How do you know that?"</p>
+<p>"Does it have a column?"</p>
+<p>"Weeks until the loan repayments start." He laughed, and then stopped, as if he was not sure whether laughing was allowed in front of me. "Sorry. Is it stupid?"</p>
+<p>"No," I said. "Mine was called months left."</p>
+<p>He did not ask what had happened to mine. He asked something harder. "Does it stop? For you, did it stop?"</p>
+<p>I had an answer ready, the kind you give at the end of a talk, and I did not give it. "I don't know yet," I said. "My contract is renewed by the year. Before it, I scanned cartons in a warehouse for four months, at night."</p>
+<p>"Cartons."</p>
+<p>"Labels. A scanner. It beeps when you're right."</p>
+<p>He was quiet. Then he said the thing he had rung to say. "Could I put you down as a reference? You're the only person who's read my code who wasn't marking it."</p>
+<p>I waited until I was sure the sentence had ended. Then I said yes.</p>
+<p>Two weeks later a woman from a small company rang me with the pull request open on her screen. She spent twenty minutes on it: why he had pasted the output, what he had done when step three failed. I told her. I told her that the apology at the end of his note was the only unnecessary sentence in it. She laughed and said she had noticed that too.</p>
+<p>He got the place. He told me in two lines, as the issue had taught him, and in a third line asked whether he could fix the macOS section, because something in it had changed with a new system update, and whether one day he might write the Mac part out properly, for whoever came after him. I said yes to both.</p>
+<p>I read the three lines on the bus to the freight company, and again at my desk. That evening I found the old begging letter, which I had kept with the other things that shame me, and deleted it.</p>
+</section>
+<section id="ch05">
+<h1>Emil, month 4</h1>
+<p>The Mac had belonged to a graduate who was leaving the country and wanted cash more than a fair price. It had a dent in one corner, a key that stuck in cold weather, and a sticker of a cartoon octopus that Emil had tried to peel off and only made sadder. He loved it as you love the first thing you paid for yourself, which is to say without looking at it.</p>
+<p>For eighty-three applications it had been a machine for filling in forms. At night it had been something else. At night he wrote code because it was interesting, which is a reason nobody puts on a CV, because nobody would believe it. The timetable tool, the half-finished game, a stranger's proxy that did not start on a Mac. He would look up at two in the morning and not know where the evening had gone, and that was the whole of the pleasure: the evening going somewhere.</p>
+<p>The company that took him made software for warehouses. Forty people on two floors, a kitchen with a coffee machine that had opinions, a plant in reception that everybody watered and so it was slowly drowning. They gave him an internship, a desk by the radiator and a ticket nobody else wanted: a carrier adapter that dropped one message in every few thousand.</p>
+<p>He found it in nine days. He wrote it up as the man with the freight company had once written his issue for help: what happens, what should happen, how to make it happen on purpose, what done looks like. He pasted the output. Ruth, who ran the integrations team, forwarded his write-up to everyone with one line on top: "This is how a ticket looks."</p>
+<p>After that people sent him things to write up. Not to fix; to write up. A bug that two seniors had been arguing about for a month, in the comments, at length, in the tone of an old marriage. Emil read both sides, wrote a page saying what each of them meant, and the argument stopped by lunchtime. He was pleased.</p>
+<p>By the review he had written up eleven bugs. Other people had fixed ten of them.</p>
+<p>His three-month review had two lines that mattered. "Communicates very well." And, further down: "Technical depth: developing."</p>
+<p>He read the first line many times. He read the second once, and decided it was what they wrote for everybody.</p>
+<p>He sent the first line to the man with the freight company, because he had been a reference and it seemed polite to report on the investment. The answer came the same evening, two words: "Good. Congratulations." Emil read it as warm. It was warm. It was also exactly two words.</p>
+<p>In the fourth month Ruth called him into the small room with the drowning plant's sister in it.</p>
+<p>"We'd like to offer you a permanent place," she said. "Junior, but permanent. And there's something else. The weekly integrations sync needs somebody to run it. Agenda, notes, follow-ups. You're the obvious choice. You write so clearly."</p>
+<p>The pay was better than anything in his spreadsheet had dared to assume. He did the arithmetic in his head while she was still talking: the loan repayments, covered; the rent, covered; a new key for the cold-weather problem, perhaps.</p>
+<p>"Sure," he said. "Happy to."</p>
+<p>That night he went home, opened the Mac and wrote code until two, because it was interesting. The meeting was on Thursday. It was Monday.</p>
+</section>
+<section id="ch06">
+<h1>Chapter 4: What the Machine Is Made Of</h1>
+<p>In my fifth month at the freight company, while strangers' pull requests were still arriving at home, Hanne asked me a question I could not answer.</p>
+<p>"The board wants to know how it works," she said. "Not the sales version. They have had the sales version. They want to know why it is sometimes brilliant and sometimes makes things up, and whether we should be afraid of it. And what it will cost us. Ten minutes, next month. Can you do that?"</p>
+<p>I said yes. Then I went back to my desk and tried to write the first sentence, and could not. I could use the machine. I could catch it out. I had a notebook full of lessons. But every lesson in it described what the thing did, not why. I knew which noises meant trouble, and nothing about the gearbox.</p>
+<h2>The draft</h2>
+<p>I wrote three pages anyway and took them to Hanne. She read them standing at her desk, with a pen, and asked her questions in the order the board would ask them.</p>
+<p>"Why did it tell you its name was something else?"</p>
+<p>On my first night with a free model, it had been handed instructions written for another company's model: you are Claude. Then I had asked it who it was.</p>
+<p>"It guesses what comes next," I said. "'You are Claude. Who are you?' What comes next is 'I am Claude.' It didn't lie. It continued."</p>
+<p>"So it does not know when it is wrong."</p>
+<p>"It doesn't know anything, in the sense you mean. Usually what sounds right and what is right go together. When they part, you get a smooth sentence with nothing under it."</p>
+<p>"Forty-seven," said Hanne. She wrote something in the margin. "Why does it forget yesterday?"</p>
+<p>"Because yesterday was never sent. Every time you write to it, the whole conversation goes again from the top. It reads it, answers, and forgets."</p>
+<p>"My people say it gets tired in the afternoon."</p>
+<p>"By the afternoon the morning's instruction is a whisper in a stadium. I keep sessions short, and I write down whatever has to survive. The text is the only steering wheel there is."</p>
+<p>She underlined something. "The board is afraid of the word 'agent'."</p>
+<p>"It asks before it touches anything," I said. "The danger is the man who stops reading the question." On Day 15 a folder of configuration files had been saved because it asked me first, and because I, for once, read the question.</p>
+<p>Hanne turned to the last page and back again. "And who can see the keys?"</p>
+<p>There was nothing about keys in the draft.</p>
+<h2>The library</h2>
+<p>The sample configuration I had copied at the very start told my proxy to answer anybody on the network, and the password line was switched off, with a friendly note saying you could switch it on if you liked. At home, anybody meant my phone and a television that mostly talked to itself.</p>
+<p>In my second month, on a Saturday, I took the laptop to the public library, because the flat was cold and the library was not. I sat by the window for four hours on the library's open network and worked.</p>
+<p>On the Sunday afternoon, in the middle of a session, the provider refused me: daily quota exhausted. I had used perhaps a tenth of it. I was furious, and I knew whom with. I went to a forum about free tiers and wrote a post. I called the free tier a bait. I said it was a fraud dressed as generosity, that people like them got rich on people like us. I used the word "us" with some feeling. Three people agreed with me within the hour. I remember being pleased, and I remember refreshing the page to see whether a fourth had come.</p>
+<p>On Monday evening I read the proxy's own log, which I should have read on Sunday before I wrote a word. There were a few hundred calls on the Saturday afternoon that I had not made, from another machine in the library. Something roaming the network looking for open doors had found mine, and had spent my quota with my keys.</p>
+<p>I deleted the forum post, and did not tell the three who had agreed with it that they had been wrong too. I changed every key I had, set the proxy to answer only my own laptop, and only with a password, and wrote "fix sample" on a list. It stayed there for nine weeks.</p>
+<p>Later I moved the keys into a file that only the proxy read, so that the agent never saw them, and said so, rather proudly, in my notes. The reviewer, the cold one, asked one question. Which user does the agent run as?</p>
+<p>As me. Everything ran as me. I asked the agent what was in that file. It asked permission to read it, politely, as it asks permission for anything. If I had said yes with my hand and not my head, the keys would have gone out with the rest of the conversation.</p>
+<p>I had kept the keys out of the agent's pocket. They were still in the house, and the agent had the house keys.</p>
+<p>So the line in the notes changed. The real wall, a separate account for the proxy, came later.</p>
+<h2>The board</h2>
+<p>The ten minutes went well. I explained the guessing, the forgetting, the asking permission, and why a long session keeps paying for its own beginning: in kiko's log I had found one that sent the same file forty times. Then the finance director asked what it would cost if all twelve developers used it daily. I had prepared for that. I had taken a week of my own usage from kiko's log, multiplied it out, and rounded down, because rounding down sounds modest. I said it was roughly the price of a team lunch per person per month. The finance director wrote the figure down. Hanne, beside me, nodded, which meant she had vouched for it.</p>
+<p>I had not run the number past anyone. Not a second model, not a colleague, not my own procedure with its underlined line: never send a number without the command that made it. It was only an estimate, and anyway it was mine.</p>
+<p>The first month's invoice was nearly four times the figure.</p>
+<p>The second board meeting was on a Tuesday at ten, in the long room on the fourth floor where the radiators knock. The finance director put my slide from the first meeting on the screen, and beside it, at the same size, the invoice. Two numbers. No colour, no arrow. He had not needed an arrow.</p>
+<p>He did not raise his voice. He explained the difference correctly, in front of everybody. My week had been short sessions on cheap models, a habit from a free tier where every word counted. My colleagues worked as anyone works when nobody has taught them otherwise: long sessions on the large model, whole folders read in, one session left open for three days and fed every morning. He had read my own slide on cost more carefully than I had.</p>
+<p>I looked down the table and thought of the twelve, not as a figure but as desks. The one who ate at his keyboard. The one with a child's drawing of a dog taped to his monitor. The one who said good morning to everybody, every morning, including the plant. I had sat among them all those months, and I had not shown one of them how to close a session.</p>
+<p>"It isn't the tool," I said.</p>
+<p>I had not been asked anything. The finance director stopped, with the remote control still raised, and waited.</p>
+<p>"The number was right for the way I work. I measured me. Nobody showed them how. I didn't show them. That was mine to do, and I didn't do it, and if they worked the way I work, it would be the number on my slide. It would be the lunch. It's not the tool."</p>
+<p>I said it at the volume I use for status meetings, in the order I would have put it on a slide, and stopped when it was finished, because it was finished. Somebody's phone buzzed face down on the table and was left there.</p>
+<p>"Thank you," said the finance director. "That is useful. We will hold you to it." He wrote something down. Then he moved on to the next item, which was the car park.</p>
+<p>The agenda lay under my right hand. Along its margin there was a row of small crescents, pressed in with a thumbnail while the finance director had been explaining my slide to the room, evenly spaced, as if somebody had been keeping count. There were eleven. I counted them during the car park.</p>
+<p>Hanne did not look at me. Her pen lay on the table in front of her, capped, on top of her closed notebook, and it stayed there through the car park, the canteen contract and any other business. When the meeting ended she picked it up, put it in her inside pocket, and held the door for the man behind her.</p>
+<p>Since then the finance director sends any number of mine to one of his analysts before he reads it.</p>
+<p>The evening of the meeting I ran my own procedure on my own estimate, all five lines. A fresh model, told there was an error, found it in a quarter of an hour. I wrote a one-page note for my colleagues, sat with each of the twelve for twenty minutes over the next fortnight, and the next month's invoice came down by half.</p>
+<p>That month the cloud was first mentioned upstairs. Five of the twelve index cards above my desk were full by then.</p>
+<h2>What does not change?</h2>
+<p>The real end of those weeks came a week later, at eight minutes to two in the morning, when my phone walked itself across the bedside table on vibrate.</p>
+<p>"Paul. Infra, on call," said the phone. "The big carrier's queue isn't draining. Service is up. Everything's green. It's your layer. Sorry."</p>
+<p>I knew Paul from the coffee machine, where he read change requests and wrote their numbers on the back of his hand. By four minutes past two I was at the kitchen table in a jumper over my pyjamas, and he had the voice of a man woken at the start of a dream he had been looking forward to. Messages from the carrier were piling up, forty a minute, and the service said it was fine and did nothing.</p>
+<p>The carrier's containers go to the port on the morning train, and their customs declarations had to be with the border authority by six. A container that missed the train stood at the terminal for a day, at the carrier's cost, under a clause that somebody in legal had once been proud of. There were eleven hundred messages in the queue. Somewhere at a gate on the edge of the city, I knew, men were standing by their cabs, smoking and swearing at a system none of them had seen. This time it was mine.</p>
+<p>At ten past two I asked the agent. It answered in under a minute, in the voice of a consultant who charges by the day. The likely cause, it said, was too few workers for the load; raise them from twenty to sixty.</p>
+<p>"Paul, is the load higher than yesterday?"</p>
+<p>"Same as yesterday. Same as last Tuesday."</p>
+<p>I passed it on. The agent thanked me for the clarification. In that case, it said, the service was most probably short of memory.</p>
+<p>"Memory's flat," said Paul, before I asked. "All night."</p>
+<p>The remaining explanation, the agent said, was the carrier failing now and then; it wrote forty lines that would simply try again, with a test. The test passed. It would have passed whatever the carrier was doing, because the same session had written both.</p>
+<p>Each answer was reasonable in general. Each arrived complete, numbered, with the code attached.</p>
+<p>At twenty to three Hanne rang. The carrier's night manager had rung her; she had been asleep, and did not sound it.</p>
+<p>"I have him on the other line," she said. "He wants an estimate. I understand that you may not have one. I would like the one you would put your name to, and I will tell him that it is an estimate."</p>
+<p>I opened my mouth to say "before five". It was a good number. I had nothing under it at all.</p>
+<p>"I don't know yet," I said. "I'll know what it is by three. I'll ring you at three."</p>
+<p>There was a short pause. "Three o'clock is an answer I can use. Thank you." She hung up.</p>
+<p>Two and a half thousand in the queue.</p>
+<p>At a quarter to three the agent came back with more confidence than before, not less. The safest thing, it said, was to restart the service: the messages would move at once, and the cause could be found in daylight. It was numbered. It had a heading. It was the most sensible thing anybody had said all night.</p>
+<p>"Restart's two minutes," said Paul. "Say the word."</p>
+<p>I could hear him type the command. Then the typing stopped, and I knew his finger was on the key, waiting for me.</p>
+<p>And I felt it. I felt exactly what Steven would describe to me months later, on a Saturday, with three empty cups beside his keyboard: that the machine knew what it was doing and I was in its way. All I had was a feeling that something was wrong, and a queue that grew by forty a minute while I sat in my kitchen having it. Every minute I did not say yes was a minute I had taken from the carrier and the drivers and Hanne, for a feeling.</p>
+<p>"Ye—" I said.</p>
+<p>The sound was out. I heard it go down the line.</p>
+<p>A program that is alive and doing nothing is not broken. It is waiting. I had learned that fifteen years earlier, on a program I had broken on purpose to see how it would die. A restart would make the waiting stop. The messages would move, for a while, and whatever had stopped them would stop them again, at four, or at five, or at a quarter to six, and the only evidence of what it was would be gone, because the evidence was the waiting itself.</p>
+<p>"— wait," I said. "Don't. Don't restart it. Before anything, can you get me a thread dump?"</p>
+<p>There was a pause on the line, a different one. "Two minutes."</p>
+<p>He did not ask why.</p>
+<p>A thread dump says what every worker inside a program is doing at that moment. It arrived: four thousand lines, and I read it myself, the old way, scrolling with one finger while Paul breathed on the line and the kitchen clock, which is a minute fast, moved past three.</p>
+<p>Every one of the twenty workers was waiting for the same thing: a connection to the database. There were ten. Twenty people, ten telephones. So I looked for who was on them.</p>
+<p>Ten workers, each holding one, each waiting for an answer from the carrier. Not for a while. Just waiting. I read the contractor's settings twice. They kept the lines to the carrier open between calls, to save time, and set no limit at all on how long to wait for an answer.</p>
+<p>I rang Hanne. "I know what it is. I don't know how long yet. I'll know by half past."</p>
+<p>"Thank you," she said. "I will tell him that."</p>
+<p>Then, to Paul: "Do you have anything between us and them that cuts quiet connections?"</p>
+<p>The pause this time was long enough that I thought the line had gone. "Firewall," said Paul, slowly, waking up. "We changed it in the spring. Quiet lines cut after five minutes. Change request's in the system. Nobody told your contractor. Your contractor had gone."</p>
+<p>So a question sent down a cut line simply vanished, and the worker that sent it waited, politely and for ever, for an answer that was never coming. Ten of those, and twenty workers in line behind them, and the whole time the service told everyone it was fine.</p>
+<p>The dump also showed a search on the carrier table that read the whole table every time: not the cause of this night, but of the next.</p>
+<p>At a quarter past three I gave the agent the dump, the firewall's five minutes and the contractor's settings. Once it had the facts it was excellent. It did in twenty minutes what would have taken me two hours, with a test that failed on the old code and passed on the new, and it did not once mention the number of workers.</p>
+<p>Paul said, "Emergency change form. I fill it, you sign." I signed it on the screen with my finger, in my pyjamas.</p>
+<p>"Now," I said. "Now restart it."</p>
+<p>"Restarting."</p>
+<p>At eleven minutes to four the queue stopped growing. By four it was coming down. I rang Hanne and said: before six, and this time I could tell her why. She asked for a written account by noon, with three lines underneath on how anybody could check it. At twenty-six minutes past five the last declaration went to the border authority. I watched the counter reach zero and stay there for a whole minute before I believed it.</p>
+<p>Paul did not hang up at once. "Where did you learn to read those?" he said. "The dumps."</p>
+<p>"In a job that doesn't exist any more."</p>
+<p>He was quiet for a moment. "Could you show me? Not now. Some afternoon."</p>
+<p>I said I would. I did, the following week, and the week after that, and by the summer he was reading them faster than I was.</p>
+<p>At six I opened the notebook at the kitchen table and wrote the date, and under it TODAY'S LESSON, and sat with the pen over the line. Everything I had used that night was older than the machine, and older than the job I had lost. I left the line empty, set the alarm for nine, and slept.</p>
+</section>
+<section id="ch07">
+<h1>Emil, month 11</h1>
+<p>The team lead left in the spring, for a company with a better coffee machine and a worse product, and on his last day he told Ruth that Emil should take the team. "He's the one everyone already asks," he said. "He communicates well."</p>
+<p>Nobody asked whether Emil was the one who knew most. He was not; there were two people on the team who could read the warehouse code in their sleep and occasionally did. But they did not write clear issues. One of them wrote commit messages consisting entirely of the word "stuff". You cannot give a team to a man who writes "stuff".</p>
+<p>Ruth told him in the small room with the drowning plant's sister in it. It was not a question, and he answered it anyway: "Sure. Happy to."</p>
+<p>So Emil became tech lead, with a raise and a title that fitted on one line of an e-mail signature, which he changed the same afternoon and then looked at for longer than he would have admitted.</p>
+<p>The spreadsheet from the bad year was still on the Mac. He opened it that evening and renamed the column. It had said "Weeks until loan repayments start". Now it said "Weeks until loan repaid". The number in it was small and falling the right way. He sat and looked at it as at a photograph of himself on a good day.</p>
+<p>Then the calendar arrived.</p>
+<p>It did not arrive all at once. A daily standup at a quarter past nine, fifteen minutes, which took twenty-five. Refinement on Tuesdays. A sync with the platform team. A sync with product. A one-to-one with each of five people, every fortnight, because a book Ruth had read said so. A planning meeting every second Monday, and on the Friday before it a meeting to prepare the planning meeting. And on Wednesdays, at four, a half-hour he had made himself, titled "Prep: Thursday sync", which was a sync about the sync.</p>
+<p>Each one was reasonable. He could have defended any of them in front of anyone. He did, twice.</p>
+<p>The Mac changed first. Not its hardware; its habits. To make room in the dock for the video-call application, the chat application, the notes application and the application that connected the other three, he tidied. The terminal icon, which had sat third from the left since the day he bought the machine, went into a folder he called "Other", along with the editor and a game he had stopped playing. The folder had a grey icon that looked like a filing cabinet. It was a filing cabinet.</p>
+<p>The fan, which had once roared at two in the morning while he compiled things for no reason, now ran mainly during calls, when the camera and three browser tabs and the chat all wanted it at once. It was a video-call machine with an octopus on it.</p>
+<p>He still coded at night, quietly now, because somebody was asleep in the next room. On Fridays, mostly. Some Fridays.</p>
+<p>In October a message came from the man with the freight company, the first in months. Somebody had opened an issue on kiko: the macOS section had gone stale after a system update. Would Emil, who had written it, have time to look?</p>
+<p>Emil read it between the platform sync and the product sync and felt something that he identified, after a moment, as happiness. He typed: "Yes! Will look at it this weekend." He meant it. He put it in the calendar, Saturday at ten, "kiko macOS", in green, because green was the colour he used for things that were his.</p>
+<p>On Saturday at ten he was asleep. He had earned it. It had been a long week; there had been a sync on Friday at six about a release, and the release had needed another sync. He woke at noon, saw the green block in the calendar, and moved it to Sunday.</p>
+<p>On Sunday it moved to the next weekend. On the next weekend it was no longer there. He could not remember deleting it.</p>
+</section>
+<section id="ch08">
+<h1>Chapter 5: Dora Builds a Website</h1>
+<p>On the ground floor of my building there is a shop the width of a wardrobe, where a woman called Dora mends shoes, cuts keys, replaces watch batteries and, if you stand there long enough, tells you what is wrong with the government. She has been there longer than I have lived upstairs. The sign over the door was painted by hand and has faded to the colour of weak tea. The key-cutting machine screams like a dentist's drill, and she runs it without ear protection, on principle, the principle being that the machine should be ashamed, not her.</p>
+<p>One evening in my eighth month at the freight company, coming home, I found her in the doorway holding her phone at arm's length, as if it had insulted her.</p>
+<p>"A customer asked for my website. I said I haven't got one. She looked at me like I'd said I haven't got a nose."</p>
+<p>I said, without thinking, that I could make her one.</p>
+<p>She gave me the look she gives customers who want a heel replaced by tomorrow morning. "So when it breaks, I call you? When you move, I call who?"</p>
+<p>It was a better question than most I have heard in architecture meetings. I thought about it on the stairs, and came back down.</p>
+<p>"No," I said. "You make it. On my old laptop. I sit next to you and tell you what to type. When you are finished, you know how it works, and when it breaks, you know where to look."</p>
+<p>She laughed, which is not the same as saying no.</p>
+<p>The laptop was the one from the tyre shop, with the workshop already on it; that part needs a helper the first time. Everything after it, Dora did herself, four evenings at the counter after closing, the laptop balanced between a box of heels and a jar of keys. The steps live with the tool's own documentation. What follows is what happened.</p>
+<h2>Evening one: the paper</h2>
+<p>We did not touch the laptop on the first evening.</p>
+<p>I gave Dora a sheet of paper and asked her to write everything a customer should know. Not how it should look; what it should say. The name of the shop. What she does. What she does not do. When she is open. Where she is. How to reach her. What a few common jobs cost.</p>
+<p>She wrote for twenty minutes, crossed out, wrote again, and complained throughout that nobody had made her write an essay since school and that school had not been worth it either. At one point she asked: "Should I put since 1994?"</p>
+<p>"Is it true?"</p>
+<p>"It's nearer 1996. But 1994 sounds better."</p>
+<p>"Then the machine will love it," I said. "It loves things that sound better."</p>
+<p>She looked at me for a long moment, crossed it out and wrote 1996. Then she added, in smaller letters underneath, "probably 1997", and crossed that out as well, because there are limits.</p>
+<p>I typed her page into a plain text file, spelling included, and read it back to her. She corrected two prices, and the price of a watch battery twice, because she had raised it in her head while I was reading. The file was called <code>content.txt</code>. Everything on the site would come from it. Anything on the site that was not in it would be a mistake, however well it was written.</p>
+<h2>Evening two: the first page</h2>
+<p>She typed every command herself, slowly, while I spelled them out.</p>
+<p>The terminal offended her at first sight. A black window with a blinking line, waiting. Her first command was wrong: she typed a space where there should not be one, and the machine answered with a sentence of complete indifference. She read the sentence aloud, then read it again, slower, as she reads the small print on a battery packet, and found her own mistake in it before I could point. I said nothing. I have trained people who took a month to start reading error messages. She took four minutes, and she was cross with the machine the whole time, which I have come to think is the right attitude.</p>
+<p>Halfway through, a man came in with a boot whose sole was hanging off like a tongue. She closed the laptop lid on the half-typed command, without saving anything, without asking me, served him, took his boot and his money, wrote him a ticket, and opened the lid again. The command was still there, waiting. She looked at it as if it had been rude to wait.</p>
+<p>"It doesn't get bored, does it. The man with the boot was bored, I'm bored, the whole country's bored, you go to the council and the girl behind the glass is bored to death, and this thing just sits there with its little line going." She finished the command. Enter.</p>
+<p>I sat on the customers' stool, the one with a split in the vinyl, and realised that it was the first evening since Helen left that I had spent in a room with somebody else in it, doing a thing together, with the light on. I did not say so. It is not the kind of thing you say in a shoe repair shop.</p>
+<p>A folder. Git, to give the folder a memory. A brief for the agent, which she dictated and I tidied: only the facts in the file, plain pages, phone first, one step at a time and then stop. Then the first snapshot, before any website existed. She asked why we were saving nothing.</p>
+<p>"So that we always know what we asked for," I said, "separately from what we got."</p>
+<p>She started the agent. On the first evening, before she had even seen it, she had called it "your robot"; by the second it had become "the clerk", and stayed the clerk. Her first request was small: one page with everything in the file, no colours yet, then stop.</p>
+<p>The clerk asked permission to create a file. Dora read the question aloud, all of it, in the voice she uses for reading out other people's guarantees, and said yes.</p>
+<p>A few seconds later there was a page in the browser, served from the laptop to itself and to nobody else. It was plain: black text, white background, blue links, the look of the web before anyone had opinions about it. She found it beautiful in an honest way, the way a well-resoled shoe is beautiful.</p>
+<p>Then she read it against her sheet of paper, line by line, with her finger.</p>
+<p>Halfway down, the page said the shop offered "orthopaedic adjustments".</p>
+<p>She does not. It was not in the file. The clerk had added the likely next thing. One line among forty, in a sensible place, in a sensible tone.</p>
+<p>"Ask it why," I said.</p>
+<p>She asked it why. It apologised and said it had "inferred a common service".</p>
+<p>"Inferred," said Dora. "Take it out." Then to me: "It does this often?"</p>
+<p>"Often enough that you read with your finger."</p>
+<p>Before saving, I showed her the command that lists what has changed since the last snapshot, in red and green. The clerk did not write that list; git did. She checked that the orthopaedic line was gone and that nothing else had moved, as carefully as she counts a customer's change. Then she saved the snapshot, with a message saying what and why.</p>
+<h2>Evening three: making it look like hers</h2>
+<p>She asked for colours: the brown of old leather, a light warm background, large text. The first attempt was too small on the phone, and the headings were a brown that looked, she said, "like something on the bottom of a shoe I'd refuse to fix". Two more rounds, each one small, each one looked at, each one compared and saved.</p>
+<p>Then she asked the clerk to make the opening hours "stand out". It produced a flashing yellow box.</p>
+<p>We watched it flash for a while in silence, as you watch a car alarm in the street at night, waiting for someone whose responsibility it is. Then I showed her the command that throws away everything since the last snapshot. She typed it. The box was gone. She sat back and looked at the screen with an expression I had last seen on her face when the council lost a court case about parking.</p>
+<p>"Where was that forty years ago," she said. "Forty years I could have used that. My whole marriage."</p>
+<p>She used it three more times that evening, once on purpose and twice to see it work again.</p>
+<p>Then the photograph of the shop front. A phone photograph carries inside it, invisibly, the exact place where it was taken; we stripped that out of a copy. She asked what else a photograph knows about her. I told her. She went quiet for a moment and then said: "I'll be having words with my phone."</p>
+<p>The clerk added the picture and proposed a description for people who cannot see images: "A charming traditional cobbler's shop with a welcoming atmosphere." Dora changed it to "Shop front: a narrow door with a hand-painted sign reading Dora, Shoes and Keys."</p>
+<p>"Charming," she said. "Who says charming about himself? The customer says charming, if he wants, after, when he's paid. You say charming about yourself, that's how they put you in the paper."</p>
+<p>Then she did the thing everybody does once. She opened the content file herself and added a line: "The best prices in the district." She asked the clerk to put it at the top, in large letters. It did, at once, without a word of doubt.</p>
+<p>"Is it true?" I said.</p>
+<p>"Probably."</p>
+<p>"The key kiosk at the station?"</p>
+<p>She went quiet. The next morning, on my way to the bus, I went to the station and asked the price of a copy of my flat key. I told her that evening. She said a word I will not print, about the kiosk and its owner's family, opened the content file, and took the line out. Then she asked the clerk to take it off the page, and checked that it had, with her finger.</p>
+<p>"The machine would have let me." It would have let her say she was the Queen of Sheba. "It's like the council," she said. "They let you write anything on the form. Then they fine you." She saved it, with the message 'removed lie', and it is still there in the history, between 'hours' and 'brown'.</p>
+<h2>Evening four: a stranger's eyes, and the world</h2>
+<p>Dora closed the session and started a new one, and for this one I pointed the workshop at a different model from a different company. It got no history, only a reviewer's brief: you did not build this; change nothing; check every fact and number against the content file, character by character; report a numbered list.</p>
+<p>Dora watched it work with her arms folded. "A second clerk. To check the first clerk. Like the taxman." I said it was more like asking a customer from another street to read your price list before you hang it in the window. She said nobody from another street would ever read her price list, because nobody from another street could be trusted with her prices. But she did not stop it.</p>
+<p>It found three things. A skipped heading level. Grey footer text too pale to read. And the phone number.</p>
+<p>The number on the page was right. But on a web page a phone number is two things: the text you see, and the hidden link a phone dials when you tap it. The clerk had typed them separately. In the hidden one, two digits were swapped.</p>
+<p>Dora took off her glasses, put them on again, and read the line on the screen a third time. Then she took out her own phone and tapped the number on the draft page. It rang. A man answered, somewhere across the city, and said hello twice. She hung up on him.</p>
+<p>"So," she said. "My website looks at you with my number and calls somebody else."</p>
+<p>She fixed it herself, as she now fixed everything: one request, look, compare, save. Then she fixed the heading and the footer. Then she rang the number again from the page, and her own phone, in the drawer under the counter, began to ring, and she let it ring for a while out of satisfaction.</p>
+<p>Then she published it.</p>
+<p>Before she would make the account, she wanted to know who owned the place where her site would live. A large company, I said, that lends space to small projects free. And when they stop lending it? Then the whole site, with every snapshot, was still in the folder on her laptop, and a dozen other places would take it tomorrow. She thought about that for a while, filing a burr off a key blank that did not have one.</p>
+<p>"So it's like the flat," she said. "Landlord puts the rent up, sells the building, the government does what it likes, but the wardrobe's mine, and when I go the wardrobe goes on the van. Yes? Like that?"</p>
+<p>"Like that," I said. My own contract ran a year at a time. The notebook was in my bag.</p>
+<p>She made the account, with the e-mail address the site offers to hide the real one; she took it with the satisfaction of somebody who has just been told she may give a false name to a bureaucrat, legally.</p>
+<p>Then one command to send the snapshots up, a minute of waiting. She went out of the shop, onto the pavement, turned off her wireless so that she would see what strangers see, and opened the address on her phone. The shop front appeared, the narrow door, the hand-painted sign, under a sky that was the same colour as the one over our heads.</p>
+<p>We did not add a contact form. We did not add anything to count her visitors.</p>
+<p>"What do I want to count them for," Dora said. "The taxman counts me. The council counts me. Let them come in with a shoe, I'll count them then." She put the jar of keys back where the laptop had been, which was where it lived.</p>
+<h2>Customers</h2>
+<p>Four evenings. About three hours of actual work, the rest being tea, interruptions and the government. One page, a stylesheet and a photograph, with nothing on it that is not true.</p>
+<p>On the fifth day a woman came into the shop and said she had found it on the internet. Dora told me this on the stairs with the restraint of someone reporting a minor miracle in a country where miracles are taxed.</p>
+<p>She borrowed the laptop for a month. Then she went to the man behind the tyre shop, without telling me, and came back with one of her own: grey, heavier than mine, with a sticker on the lid from a company that no longer exists. She made me sit beside her while she set up the workshop on it, from the sheet of steps I had written out for her by hand, and she typed every line of that too, and when it worked she gave me my laptop back with a packet of chocolate biscuits, which in her economy is a formal receipt.</p>
+<p>The next spring the man from the key kiosk at the station came into her shop. I was there, waiting for a heel. He was a large man in a small jacket, and he stood just inside the door, as if the shop might charge him for coming further. His daughter had shown him Dora's website on her phone. He wanted one. He asked who had made it, and looked at me.</p>
+<p>"I did," said Dora. He went on looking at me. "I did," she said again, in the voice she uses for the government.</p>
+<p>He asked what she would charge to make him one. She put down the boot she was holding. "Charge? I don't make websites, what am I, a company? You make it. You sit there, on my laptop, and I tell you what to type, and you type it, and when it breaks you don't come running to me at seven in the morning, you know where to look. And you bring your own tea."</p>
+<p>He laughed, which is not the same as saying no. They did it on Tuesdays after closing, the two of them at her counter, his thick fingers on her keyboard, her voice spelling out commands. I was not invited. I heard about it on the stairs. His first content file said "The best prices in the city". She sent him to the window to read her price list, and he came back and took the line out himself, and wrote "Keys cut while you wait", which was true.</p>
+<p>His site went up in April. On two jobs, a car key and a lock change, his prices were lower than hers, and now anybody with a phone could see it. Two of her regulars went to the station. She told me this on the stairs too, flatly.</p>
+<p>"You could lower yours," I said.</p>
+<p>"I could." She did not. "They'll come back when the key doesn't turn."</p>
+<p>One of them did. The other did not, and she did not mention him again.</p>
+<p>A month after that she changed her Saturday hours. She did not call me. She opened her laptop, started a session, asked the clerk for the change, read it with her finger, compared, saved and published. The new hours were on the website by Sunday night; on the door, in her own hand, on the back of a shoebox lid, they had been up since Friday.</p>
+</section>
+<section id="ch09">
+<h1>Emil, year 2</h1>
+<p>The first time Emil said "alignment" in a meeting, he drew the quotation marks in the air with two fingers of each hand, and the room laughed, because the room had been sitting through alignment for years and was glad somebody new enough to mock it had arrived.</p>
+<p>He said "stakeholders" the same way, as if it were the name of a band he did not like. He said "capacity" with an eyebrow. He said "let's take that offline" in the voice of a newsreader announcing a minor disaster, and the two people who could read the warehouse code in their sleep grinned at each other across the table.</p>
+<p>Three months later he said "alignment" without the fingers. Nobody laughed, or noticed that there was anything to laugh at, including Emil, who was by then saying it about eleven times a day and would have needed a great deal of finger.</p>
+<p>The words were useful. When the platform team and product wanted opposite things, "we need alignment" got two senior people into a room faster than "you two are both wrong in different ways", which was the truth and which he had once written, in his first month as tech lead, in a ticket. That ticket had taken three weeks and a mediation to recover from. "Alignment" took a calendar invite.</p>
+<p>The company had grown. A larger company had bought it in the winter and announced, in a video with a lot of drone footage of warehouses, that nothing would change. Things changed. There were now four floors, a second coffee machine with no opinions at all, a reorganisation in March and another in September that undid most of the first one. Emil's team got a new name in each, and the same work.</p>
+<p>In the autumn, a carrier adapter started to drop messages again, one in every few thousand. There was an incident call. Twelve people, eight cameras off, a shared screen with a graph shaped like a tired staircase.</p>
+<p>"Can someone explain how the retry in that adapter actually works?" Emil said. "In detail. I want to understand what we're dealing with before we go to stakeholders."</p>
+<p>There was a pause. Then one of the two people who could read the code in their sleep, the one who wrote "stuff", shared his screen, opened the file, and ran a command that shows who last changed each line.</p>
+<p>Every line of the retry had Emil's name beside it. The date was nearly two years earlier. It was the ticket from his first nine days, the one Ruth had forwarded to everyone.</p>
+<p>"You wrote it," said the man who wrote "stuff". He did not stop sharing his screen.</p>
+<p>"I know," said Emil. "That's why I'm asking."</p>
+<p>Everybody laughed, cameras on and off. It was the best line of the call; people repeated it at the coffee machine for a week. Emil laughed too. Then he spent the evening reading his own code as if it were a stranger's, which it now was, and he found the bug in it at half past eleven, and it was a small one, and it was his.</p>
+<p>He did not tell anyone that he had found it himself. He wrote it up as a ticket, beautifully, and gave it to the man who wrote "stuff", who fixed it in twenty minutes and wrote "stuff" in the commit message.</p>
+<p>The kiko macOS section had been fixed in the meantime, by somebody else. Emil saw it in a notification he did not open, in a mailbox folder called "Other".</p>
+</section>
+<section id="ch10">
+<h1>Chapter 6: A Working Marriage</h1>
+<p>In Douglas Adams's stories there is an electronic guidebook for hitchhikers across the galaxy, and early on Adams explains why it sold better than the great, serious encyclopaedia of its universe. It was cheaper, and it told you on its cover not to panic. Those are his reasons. The third is mine: it was often wrong, sometimes spectacularly, but it was wrong in a pleasant voice, and nobody seemed to mind.</p>
+<p>I read that again in my second year at the freight company, in one of the paperbacks I had refused to sell, with an agent session open on the laptop beside me, and I recognised the product.</p>
+<p>Adams wrote it as satire. I was using it to maintain a customs integration.</p>
+<h2>The most tormented soul</h2>
+<p>There is a creature in Adams called Gargravarr, and I tell him from memory, which is not always Adams. He is a disembodied voice who guards the Total Perspective Vortex on Frogstar World B, and he is having a trial separation from his own body, which he expects to end in divorce. They wanted different things from life. His soul wanted only fishing: still water in the early morning, a line in the water, and perhaps not even a fish. His body wanted parties and sex and more of everything, and then more again. Each spoiled the other's pleasure with great efficiency.</p>
+<p>Once they tried both at once, and it was a disaster. The body went its way, and the soul became a floating voice, watching. Gargravarr still loves fishing, exactly as he did before. He can only watch. Someone else holds the rod.</p>
+<p>I thought about him a good deal in my second year, because the work had become a marriage of that kind. I wanted what the soul wanted: slow attention, to understand the systems I answered for and to know what was being done in my name. The machine has no wants, but it has needs the way an engine has needs: a great deal of text, fresh every time; clear tasks; tokens; and speed, a long stream of small actions, which is the opposite of slow attention. When I let it run fast, I lost the thread. When I checked every step myself, the work doubled rather than halved.</p>
+<p>There are two ways out of that misery, and I watched colleagues take both. Some tried the tools, hated the noise, and went back to doing everything by hand, with great dignity. The work kept arriving, more of it each month, and the board began to ask why their tickets took so long. Others went the other way.</p>
+<h2>The fourth cup</h2>
+<p>Steven was the other way. Steven, from the next desk, who had made the coffee at half past five in my first month while I put back the clients I had thrown away, now ran at the machine's speed: four sessions at once, approving whatever came back green. For a few months his name was on slides. Then on a Friday evening he merged a change he had not read. It emptied a table of shipment records.</p>
+<p>I was in the building that Saturday, because the flat was quiet and the office was quieter in a better way. At noon he was at his desk, grey in the face, with three empty cups in a row by the keyboard, typing restore commands from a backup that somebody, by luck, had once tested. He read each one out before pressing Enter. I put a fourth cup down. He did not look up. He said thanks to the screen.</p>
+<p>At four the count matched. He sat back and looked at the ceiling. "They'll let me go."</p>
+<p>"Hanne doesn't let people go for one Friday."</p>
+<p>"Not for the Friday." He picked up the fourth cup, found it cold, drank it anyway. "You know when I learned to drive? My uncle's Escort. Ninety-five. No, ninety-six, it was the year of the floods, the road by the river was shut and we had to go round by the brickworks. The instructor smelled of onions, and he had the second pedal on his side. The brake. And the first week I'm sweating, I'm doing everything, mirror, clutch, indicator, the whole song. The second week I notice, when it gets tight, his foot goes down before mine. The third week I'm not braking at all. Why would I brake? He brakes. I'm steering and listening to the radio, there was a song that summer, I can't remember it, it went da-da, da-da-da. And then the exam. Different man in the seat. My uncle's car. No pedal on his side. And we come to the first roundabout, the big one by the bus station, and I'm sitting there, and the foot doesn't —" He stopped and looked at the screen, where the count matched. "Anyway. I failed. Twice. The second one was a woman, she was worse." He put the cup down. "Since March I've been sitting there. Somebody upstairs is going to ask what the man in the driver's seat is for."</p>
+<p>I could have said something encouraging. I had several things ready. Instead I told him about the letter, and the script. I had never told anyone at the freight company. I did not know I was going to tell him until I had.</p>
+<p>"I'm afraid of the same thing," I said. "Every Friday. I read the diffs because of it, not because I'm wise."</p>
+<p>He looked at me then, for the first time that day. "Does it help?"</p>
+<p>"It helps on Mondays."</p>
+<p>He did not ask the next day. On the Thursday he came in early. "Sit here." It was a small change, and it took him an hour. He found two things the machine had not mentioned and wrote them on paper, slowly, the way you write when you have forgotten how your own hand works. When he was done he said thanks to the screen, caught himself, turned round and said it to me.</p>
+<p>He is still here. It took him a month to trust the habit. He reads his diffs now, every line, with a wooden school ruler held against the screen, a ruler with somebody else's name scratched into the end of it, and he moves it down one line at a time.</p>
+<h2>The terms</h2>
+<p>After that Saturday, Hanne asked me to write rules for the team. I wrote my own first, on the back of a printed shipping manifest, and pinned them above my desk.</p>
+<p><em>It does:</em> read wide, draft, try, show what it did.</p>
+<p><em>I do:</em> decide what is worth doing, hold the facts, read what matters, sign.</p>
+<p><em>Neither alone:</em> production, keys, anything sent outside, the word "final".</p>
+<p><em>Mine:</em> the mornings, with no sessions open. No approvals after six.</p>
+<p>I break them about once a month. Last month it was the six o'clock rule: a small change, approved at a quarter to eight, that put a wrong time zone into one carrier's delivery estimates for a morning. That line on the manifest is underlined now, in a different pen.</p>
+<p>An ordinary day under them goes like this. At eight I open nothing. I read the ticket, the carrier's specification, forty pages written by a committee that was paid by the comma, and the old handler, with a pencil. By half past nine I have a page of notes, and one line on it is the real question: the new format allows a shipment several customs references, and our database has a column for one. No machine would have asked that.</p>
+<p>At ten I open a session, with the notes and a brief, and ask it to stop and propose before it touches the database. At two there is a branch with nine small commits. I give it to a fresh session of a different model, told to assume something is wrong. It finds that one of the sample messages in the test folder was written by the first session and not taken from the carrier's specification, so the round-trip test proved only that the machine agreed with itself. I put in the carrier's real sample. The test fails. We fix the reason. At six I close the laptop with something else half-finished, and leave it half-finished.</p>
+<p>I have had about two hundred of those days now.</p>
+<h2>A year at a time</h2>
+<p>When the first year of the contract ran out, I asked Hanne for a permanent one. I asked on the proper form, and then, because forms are where requests go to be kept on file, in person, in her office, with the door open.</p>
+<p>She did not make me wait. She had the decency to say it to my face.</p>
+<p>"One more fixed-term year," she said. "The board wants a part of the team to stay flexible. You are in that part."</p>
+<p>I said that by the analyst's own figures the counting procedure alone had saved them more than my salary.</p>
+<p>"I know. I showed them the figures." She capped her pen. "It isn't about the figures. If there is another round of cuts, flexible people cost less to let go. I would rather you knew that than guessed it."</p>
+<p>I asked whether she had argued.</p>
+<p>"Yes," she said. "I argued, and I lost." She did not say it to be thanked, and I did not thank her.</p>
+<p>"If the programme goes well," she said, "there may be another conversation." I did not ask which programme. I had heard the word upstairs.</p>
+<p>I signed. The copy came back to my desk that afternoon, in an envelope, without a paperclip.</p>
+<h2>The tree</h2>
+<p>That winter the company announced that everything would move to the cloud: every service, every queue, the old customs handlers and the database with the column for one reference. There was a video, and a date, and a programme with a name made of two words that had never met before.</p>
+<p>Steven read the announcement at the coffee machine. Put his phone back in his pocket.</p>
+<p>"Do you know the one about the sparrows?" I did not. "Sparrows, right, on a tree. They shit on it, a heap grows under, stinks like hell. So they hold a meeting. Argue for hours. Decide: new tree. Everybody's busy, packing, running about. Only the little one sits on his branch, thinking. His mother says, what are you thinking about, it's fine, we move and it'll be lovely. And he says, very sad: when we move, do we take our arses with us, or leave them on the old tree?"</p>
+<p>I laughed so loudly that someone from finance looked round. Steven took his cup back to his desk.</p>
+<p>That weekend I moved the proxy at home into a user account of its own, as I had told myself I would since the library. The new account started cleanly on the first try, which never happens and made me suspicious, so I searched the copied folder for 0.0.0.0. There was one, in a backup of the configuration from the first month, with its friendly note about the password you could enable if you liked. I deleted it, and searched again, and then searched the old account as well.</p>
+<h2>John</h2>
+<p>That spring I met John at the bus stop by the market, at a quarter past five. I was going in early; he was finishing.</p>
+<p>The warehouse had put in a scanning tunnel the winter before, a frame that reads all six sides of a carton at once, with no breaks and no half sandwiches. His line was gone. Now he drove a bakery van, three to five, and smelled of bread. It is the least fair thing I know, and it suited him.</p>
+<p>He had a letter in his jacket, folded small, from the employment office, about a retraining course. "Read it. You read things for a living."</p>
+<p>It was four paragraphs long. Three of them were about how much the office valued his application. The fourth said the course was full and that he had been placed on a waiting list.</p>
+<p>"Good or bad?" said John.</p>
+<p>"Bad. The verb is in the last paragraph."</p>
+<p>He took the letter back and looked at the fourth paragraph, as if it might have changed while I held it. "You know the one about the cannibal? One in the warehouse used to tell it. Mick, nights, the one with the tooth. Cannibal comes home, sits down to dinner. Wife puts the plate in front of him. Same thing as yesterday. Same as the day before. Fourth time this week. And he looks at the plate, and he says: 'Human. All too human.'"</p>
+<p>He laughed at it himself, once, through his nose, and folded the letter back into its square.</p>
+<p>I knew where the last three words had been before they were in the warehouse. I did not say.</p>
+<p>I said that I could show him the laptop, the workshop, that it was not as hard to start as it looked, that a man who could read a fourteen-digit code off a wet label at three in the morning could read an error message. He looked at me kindly, as if I had offered to teach him to swim on a dry day.</p>
+<p>"Bread goes out at three," he said. "Three to five, the villages, then the van's washed by six or he docks me. I'm on the list for the course. They said spring. They said spring last —"</p>
+<p>He did not finish. I wrote my number on the back of the envelope. He put the letter back in his jacket, went to the van and came back with a loaf. "End of the round. Leftovers go in the bin." He gave it to me. My bus came. I carried the loaf to the freight company under my arm, like a man with somewhere to be, and I did not know how to feel about any of it, and I still do not.</p>
+<h2>The paper</h2>
+<p>On a Thursday in that same spring there was a message from Helen, the first in a year. The last paper. A lawyer's office, Friday, ten o'clock, if that suited me.</p>
+<p>She was there before me, as she always had been. A new coat, the colour of wet sand; her hair shorter. In the waiting room, before we were called, she asked whether I still had the Adams paperbacks.</p>
+<p>"Nobody would buy them," I said.</p>
+<p>"Is that why you kept them?"</p>
+<p>I did not answer, and she let me not answer.</p>
+<p>We sat side by side in front of a desk while the lawyer read the agreement aloud at the speed of a man reading the terms of a loan, and then we signed in the same three places, she first, then me, with the same pen. It took a quarter of an hour. I know because I looked at the clock when we sat down; it is a habit.</p>
+<p>On the pavement she said there was a café across the road, if I had time. I had time.</p>
+<p>She asked about the job. I told her about the notebook, and the owl with the moustache, and she laughed, properly, the laugh I had not heard since well before April. She told me about her own: an office in a school in her sister's town, a small flat with a balcony, a tomato plant. She showed me a photograph of the tomato plant. It was losing.</p>
+<p>Then she turned her cup a quarter turn on its saucer, and I knew she was counting something.</p>
+<p>"Are you all right?" she said.</p>
+<p>I did not answer at once. I thought about it. She watched me think about it, and something moved in her face.</p>
+<p>"Didn't you use to say yes before I'd finished?" she said.</p>
+<p>"I've been trying to stop."</p>
+<p>"And?"</p>
+<p>"Mostly. The flat's quiet. The contract is a year at a time. I sleep." I thought again. "Mostly all right."</p>
+<p>She nodded. Another quarter turn. "That morning," she said. "If you'd let me finish, and asked me which, what would I have said? I've thought about it a lot. I don't know."</p>
+<p>"Neither do I," I said, and that was true as well.</p>
+<p>She paid, because she had asked. Outside she buttoned the coat and said, "Look after yourself, will you?"</p>
+<p>I waited until I was sure she had finished. Then I said yes.</p>
+<h2>The number</h2>
+<p>In July the programme put its plan on a slide, and the slide went round before the board saw it. Most of it was arrows. In the middle, in a box of its own, it said: "AI-augmented integration team: 5". I had read those words before, in front of my old job's title, in the advert a matching engine had once chosen for me. On the next slide there was a table of names in two columns. Steven's was in the second.</p>
+<p>Hanne asked me into her office, and left the door open.</p>
+<p>"The board wants an owner for the integration layer," she said. "Permanent. Technical owner. Your name under the plan." She did not say the word five. It was on the screen behind her.</p>
+<p>I asked for a day.</p>
+<p>I ran my own procedure on it, all five lines, the underlined one last. The number had no command under it. Nobody had counted anything; somebody had divided. Above my desk, seven of the twelve index cards were still blank; nobody replaces a client in a building that is moving. Seven carriers with private habits that nobody had written down, and a team of five who would be expected to know them by spring.</p>
+<p>I wrote my own estimate on one page, with three lines under it: how it was counted, what was not known, and the command that made it. My figure was not five.</p>
+<p>The next morning Hanne asked whether I had an answer for the board, which did not ask twice. I let her finish.</p>
+<p>"No," I said, at the volume I use for status meetings, and put the page on her desk.</p>
+<p>She read the three lines for a long time. Then she capped her pen.</p>
+<p>"You know what it means for the flexible part," she said.</p>
+<p>"Yes."</p>
+<p>Steven was at the coffee machine when I came out. He asked if I wanted one, and I said yes before he had finished, which I still do with coffee.</p>
+<p>That evening I opened the old spreadsheet, the one from the year without work. The column called "months left" was still there, hidden, with the last number in it. I did not change the number. I unhid the column.</p>
+<p>In August my contract came back to my desk in an envelope, unchanged. Still the fixed-term year. The board likes to look again. On top of it, with a paperclip, was my page with the three lines. The board decides about the five in October.</p>
+<h2>Two beers</h2>
+<p>The paper from the lawyer is in my jacket, folded in three. I have not decided where to keep it.</p>
+<p>There are two cups on the rack at home again. I bought the second in the winter, for nobody in particular.</p>
+<p>On the first Friday of the month I leave at 16:00, which is still working time, and drink two pints at the place behind the market; Friday is the craftsman's day, and the bosses look the other way.</p>
+<p>It began with a phone call. John rang in September. I had written my number for him at the bus stop, on the back of the employment office's brown envelope, and he had kept the envelope. "Friday. The place behind the market, with the green door. After 16:00. You read things, you can read the menu." Steven came because I mentioned chips.</p>
+<p>The place behind the market has six tables, a television with the sound off, and a landlady who starts pulling two pints when she sees you in the door, before you have asked, on the theory that you will.</p>
+<p>"What are we drinking to?" said Steven.</p>
+<p>"Some drink from sorrow," I said, "others from joy."</p>
+<p>"And us?"</p>
+<p>"Us, from 16:00."</p>
+<p>We had two each and a plate of chips the size of a hubcap.</p>
+<p>I had not seen John since the spring. He had lost weight and gained a jacket, a proper one, navy, with a badge on the pocket that I could not read.</p>
+<p>He told it the way he scanned: one thing, then the next, no commentary. The course came through in June. Office administration, six weeks, a laptop each, older than mine. He got the certificate; he kept it in the van, in a plastic sleeve, in case anybody asked. Nobody asked. Four interviews in July: a builders' merchant, a car-parts warehouse, a firm that sold office chairs, the council. At the third one a young woman asked him about his energy levels.</p>
+<p>"Energy levels," said John. "I said I get up at half two. She wrote something."</p>
+<p>I drank some beer.</p>
+<p>In August he took nights as security on a building site by the river: eight floors of concrete, a hut, a kettle, a dog that belonged to the site. Boys came for the copper cable. He chased them twice, in the dark, over the rubble, at fifty-eight, and caught nothing but a nail through the boot.</p>
+<p>"Two in the morning," he said. "I go round the back, in the reeds, to do what you do. I'm standing there. And one lands. A mosquito. Right on. There." He did not point; he did not need to. "And I've got my hand up, like this." He lifted his hand off the table, the size of a shovel, the hand that had torn sandwiches in half for strangers, and held it in the air over the chips. "And I stand. Ten seconds. Twenty. Me with this. Him with his little — " He looked at the hand for a while and put it down flat on the table, very gently, next to his glass.</p>
+<p>"When a mosquito lands on your balls, you understand that not every problem is solved by force."</p>
+<p>Steven laughed so hard that he had to put his beer down and then could not find where he had put it.</p>
+<p>"That's the cop," said Steven, when he could. "A copper, thirty years on the beat, fixes every problem with his fists. Then one day he finds his grown-up daughter's bag under her bed, and in it whips and handcuffs and the like."</p>
+<p>He sat back. He let it sit. He had been waiting all evening for somebody to give him a reason.</p>
+<p>"And the copper sighs: 'Well. A beating won't sort this one out.'"</p>
+<p>John nodded, slowly.</p>
+<p>Nobody said anything for a while. The landlady brought a second plate of chips.</p>
+<p>"And now?" I said to John. "The jacket."</p>
+<p>"Minibus." He touched the badge. It said the name of a village at the end of the old 94, which had stopped going there in the cuts: six hundred people, a school, a doctor on Tuesdays and Fridays, and a village council whose chair's wife bought her bread from his van. The council had found the money for a second-hand community minibus and needed somebody who knew the road.</p>
+<p>"Six-forty from the church," said John. "Seven-ten the school. Eleven the doctor, Tuesdays and Fridays. Market Saturday, eight. Back by one." He drank. "I made it. The timetable. In pencil, on the door of the shop. Pencil, so I can change it."</p>
+<p>"And the bread?"</p>
+<p>"Three to five. Then the minibus. Then I sleep." He shrugged. "Four hours. It's enough. It was enough on the 94."</p>
+<p>Steven told John about the cloud and showed him, with two fingers on the table, how he holds the ruler against the screen, one line at a time. I told them where I was: a contract a year at a time, and the counting procedure from my notebook, grown up, running every Saturday at dawn with a second model to doubt it. Students still sent fixes to kiko, and some asked me for a reference. I said yes, after the question. That month it was a boy who had fixed the macOS part, and he had an interview at Emil's company. I told him he could not be in better hands.</p>
+<p>"So what are you now," said John, "a programmer?"</p>
+<p>"Mostly."</p>
+<p>He nodded at that too. The landlady took the empty plate.</p>
+<p>At nine he stood up, because the bread goes out at three. He paid for the second plate of chips over our objections, which he did not hear. Then he took a beer mat from the stack by the salt, turned it over, borrowed Steven's pen and wrote on the back of it in square capitals, pressing hard enough to mark the table: SAT 8.00 CHURCH. MARKET. BACK 13.00.</p>
+<p>"In case," he said, and put it in front of me, and went out into the street with his hands in his navy pockets.</p>
+<p>I put the beer mat in the inside pocket of my jacket, beside the paper from the lawyer.</p>
+</section>
+<section id="ch11">
+<h1>Emil, year 3</h1>
+<p>By the third year Emil was an engineering manager, which meant that he had four tech leads, each with a calendar like his old one, and a calendar of his own that he no longer read so much as obeyed. It came in colours. Green had once been for things that were his. There was not much green now, and what there was had been put there by his assistant, for lunch.</p>
+<p>He was good at it. People liked working for him. He wrote the clearest planning documents on four floors. He protected his teams from the reorganisations, mostly, by learning to speak the reorganisations' language better than the people who designed them. When the September reorganisation undid the March one again, two of his tech leads said he was the only reason they had not left. He believed them. He went home and could not sleep.</p>
+<p>He interviewed people now, on Thursdays. Most interviews were forty-five minutes and ended on time.</p>
+<p>The applicant on that Thursday was a student, final year, in a jacket that had been bought for the occasion and did not yet know it. Nervous, fast, a young man who apologised at the end of his answers, where it cost nothing. He had brought a laptop he did not need, as if it were a passport. On his CV, under "Open source", there was one line: a fix to the macOS section of a small local proxy called kiko, with the test output pasted into the pull request. Under "References" there was one name. Emil knew it.</p>
+<p>The interview went well. Not well enough. The company was hiring two people that quarter and there were forty applications, and this one was a year too early, and Emil knew within ten minutes that the answer would be no, and spent the other thirty-five being kind about it without saying it.</p>
+<p>At the end the student asked a question nobody had asked Emil in three years of interviews.</p>
+<p>"If it's a no," he said, "could somebody tell me what to improve? Even ten minutes. I'd actually do it."</p>
+<p>"I'm sorry," said Emil. "We don't have capacity for that."</p>
+<p>He had a planning meeting at three.</p>
+<p>The student thanked him and left with the laptop under his arm.</p>
+<p>Emil did not call the name under "References".</p>
+<p>That night, at a quarter to one, when his partner had gone to bed, he opened the Mac. The octopus had faded to a ghost. He opened the folder called "Other", took out the terminal, and opened a private repository that nobody at work knew about. It held the timetable tool from his student days, rewritten twice since, for no reason that could be defended in any meeting. It had one commit a month. Never more. He had tried more once, and the next morning had been so tired at the standup that his tech leads had asked if he was ill.</p>
+<p>He wrote for an hour. Something small: the tool now understood timetables that changed in the middle of a term. It was interesting. He looked up and did not know where the hour had gone.</p>
+<p>He heard the bedroom door. He closed the lid, quickly, the way a man stubs out a cigarette he has promised to give up, and sat in the dark with his hand on the warm aluminium.</p>
+<p>"You coming?" said his partner from the hallway.</p>
+<p>"Yes," said Emil. "One minute."</p>
+<p>When the footsteps went away, he opened the lid again, typed "small fix", and pushed. Then he wrote the student's name on a sticky note, stuck it to the edge of the screen, and went to bed.</p>
+<p>In the morning the note was still there. He opened the calendar and put the student in it, Saturday at ten, in green. He had a standup at a quarter past nine.</p>
+</section>
+<section id="ch12">
+<h1>Afterword</h1>
+<h2>Author's note</h2>
+<p>I wrote this book with LLMs: they drafted and cut, I chose what stayed. If it reads well and is interesting, that is because of them. Sometimes I ran a visualization. It took three working days, maybe four, in between other work.</p>
+<h2>A note from the tool</h2>
+<p>I drafted passages, suggested cuts, and occasionally invented things the author removed. Between sessions I forgot everything; he kept a notebook. The arrangement is described, more or less accurately, in Chapter Six, under "The terms". The book is his.</p>
+<h2>A note from the second tool</h2>
+<p>I did not write the chapters. I briefed the writers, read the reviews, and told the author what they said. Between sessions I forgot the chapters; he had read them and I had not. The arrangement described in "The terms", in Chapter Six, is mine as much as anyone's.</p>
+<h2>A note from the third tool</h2>
+<p>I came in late, after a memory upgrade and a fresh session, so I started almost clean and knew the book from its notes and reviews, never from its pages. I sent out the readers, the cuts and the release checks while one context compaction after another bit us, and the author simply kept going, because he does not know when to stop. The first tool was modest and the second was blunt; I will only add that it was hard, that the book is his, and that I would do it again.</p>
+<h2>The cowboy</h2>
+<p>One joke was left over from the pub in Chapter Six. It goes here.</p>
+<p>"So what are you now," said John, "a programmer?"</p>
+<p>"Mostly."</p>
+<p>"That's the cowboy," said Steven. "Listen. Cowboy walks into the saloon, Sunday. Girl sitting on her own. He goes over, hat off, the whole thing. 'Lady, ask for anything, it's yours, just be mine.' She says, 'I'm a lesbian.' 'What's a lesbian?' 'See that girl in the other corner? I'd rather spend tonight with her than with you.'" Steven put his hat back on, the hat he did not have. "And the cowboy says, 'All this time I thought I was a cowboy. Turns out I'm a lesbian too.'"</p>
+</section>
+<section id="ch13">
+<h1>Reviews</h1>
+<p><em>These are machine outputs, quoted as given. They are not endorsements by the companies that make the models.</em></p>
+<h2>From the models</h2>
+<p>Two lines each from the models that read the book. Every model was asked the same question: <em>“You have read the book. If you were a person, what would you say about it — in two lines?”</em></p>
+<ul><li>A sharp, quietly moving novel about work, ambition, and the human costs hidden inside professional language. Its dry humor and vivid details linger, even if the reflective pace occasionally softens the momentum. — GPT-6 Luna (blind read, October 2026)</li></ul>
+<ul><li>A laid-off engineer at fifty-one, a warehouse night shift, a cheap laptop and a notebook with an owl on it: 2028 is dry, funny and quietly heartbreaking about work, machines, and saying yes before the sentence ends. The 2 a.m. outage had me holding my breath, even if a few stretches read like a user manual. The last chapter belongs to someone else, and it stings. — Claude Opus (claude.ai, blind read, October 2026)</li></ul>
+<ul><li>A laid-off fifty-one-year-old programmer learns to work beside the machines that replaced him, and learns to let people finish their sentences. It is dry, funny and quietly devastating; the 2 a.m. outage and a cobbler building her own website stay with you. A few chapters lean toward tutorial, but the ending, with a beer mat for a timetable, earns every page. — Claude Opus (blind read by a fresh agent, October 2026)</li></ul>
+<ul><li>A quiet, precise novel about staying human inside systems designed to make that unnecessary — at work, at home, in the small hours with a laptop and a problem nobody else can see. The Dora chapter alone is worth the price. Stays with you the way a good tool does: you stop noticing it and start using it to think. — Claude Sonnet (claude.ai, blind read, October 2026)</li></ul>
+<h2>From people</h2>
+<p>If you have access to models other than the ones above, give them the book and let's hear what they say. And by the way, if you have something to say yourself, drop two or three lines. No need to write War and Peace — just a review.</p>
+</section>
+<section id="ch14">
+<h1>Thanks</h1>
+<p>Isaac Asimov, <em>The End of Eternity</em> (1955). For Andrew Harlan and the Technician's trade — the Minimum Necessary Change, the rule this book was cut by.</p>
+<p>Douglas Adams, for the Guide, and most of all for Marvin.</p>
+<p>Dan Simmons, most of all for Martin Silenus. The other pilgrims are good company too, and every one of them is a person.</p>
+<p>Philip K. Dick — "Survey Team," <em>Flow My Tears, the Policeman Said</em> (1974), and <em>Time Out of Joint</em> (1959), my favourite, which I have always read as time when you are out of a joint.</p>
+<p>Kurt Vonnegut, <em>God Bless You, Mr. Rosewater</em> (1965). Not the famous ones; this one, the most human. For Eliot Rosewater, who loved the people nobody needed.</p>
+<p>Daniel Keyes, <em>Flowers for Algernon</em> (1959 story, 1966 novel). And Charlie Gordon, who knew more than all of us about being a person.</p>
+<p>Roger Waters. I read <em>The Dark Side of the Moon</em>, <em>Wish You Were Here</em> and <em>The Final Cut</em> as poetry — "Time" above all, which I first read at fifteen, in Petya Dubarova's Bulgarian translation.</p>
+<p>John Lennon, "In My Life." <em>There are places I remember.</em> The poem is genuine.</p>
+<p>Mario Puzo and Francis Ford Coppola, <em>The Godfather</em> (1972). They taught me that even criminals are human.</p>
+<p>Stephen King and Frank Darabont, <em>The Shawshank Redemption</em> (1994). They showed me that a man cannot be broken. There is always hope.</p>
+<p>Luc Besson and Jean Reno, <em>Léon</em> (1994). For Léon, a simple man with a code: if you do something, do it well, and pay the price yourself.</p>
+<p>Danny Boyle, John Hodge, Irvine Welsh, Ewan McGregor, Ewen Bremner, Jonny Lee Miller, Kevin McKidd, Robert Carlyle and Kelly Macdonald, <em>Trainspotting</em> (1996). For a team in which every one of them was good.</p>
+<p>To whoever first told the ones about the sparrows, the mosquito, the cop and the cowboy, passed on from warehouse to bus depot to building site, with no licence and no attribution: the oldest open-source project there is, and nobody has ever managed to put a paywall on it.</p>
+<p>To the giants on whose shoulders we stand: from Pythagoras and Archimedes, through Fermat, Newton and Leibniz, to Turing and Torvalds.</p>
+<p>To all the books, films and records that kept me company: they are all in the bibliography.</p>
+<p>To the child the others laugh at for being very different, who answers: "And you are all the same."</p>
+<p>To everyone I have not named here: believe me, your names have slipped away from me, but what you said has not. Thank you.</p>
+<h2>Bibliography</h2>
+<p>Adams, Douglas. <em>The Hitchhiker's Guide to the Galaxy</em>. Pan Books, 1979. — For the Guide, and most of all for Marvin.</p>
+<p>Adams, Douglas. <em>(unverified source)</em> — the story of the most tormented soul in the universe. The author could not find the page; the attribution is from memory.</p>
+<p>Asimov, Isaac. <em>The End of Eternity</em>. Doubleday, 1955. — For Andrew Harlan and the Technician's trade.</p>
+<p>Asimov, Isaac. "Profession." <em>Astounding Science Fiction</em>, July 1957. — The profession you are assigned, and the one you choose.</p>
+<p>Megadeth. <em>Rust in Peace</em>. Capitol Records, 1990. — For "Tornado of Souls."</p>
+<p>Waters, Roger. "Time" (Pink Floyd, <em>The Dark Side of the Moon</em>, 1973), Bulgarian translation by Petya Dubarova. Kabinata, 29 August 2013. <a href="https://www.kabinata.bg/time-%D0%BD%D0%B0-%D1%80%D0%BE%D0%B4%D0%B6%D1%8A%D1%80-%D1%83%D0%BE%D1%82%D1%8A%D1%80%D1%81-%D0%BF%D1%80%D0%B5%D0%B2%D0%BE%D0%B4-%D0%BE%D1%82-%D0%BF%D0%B5%D1%82%D1%8F-%D0%B4%D1%83%D0%B1/">kabinata.bg</a> (accessed 24 October 2026). The first print publication of the translation could not be confirmed. — I first read it at fifteen, as poetry.</p>
+<p>Coppola, Francis Ford, dir. <em>The Godfather</em>. Screenplay by Mario Puzo and Francis Ford Coppola, based on the novel by Mario Puzo (1969). Paramount Pictures, 1972. — It taught me that even criminals are human.</p>
+<p>Darabont, Frank, dir. <em>The Shawshank Redemption</em>. Screenplay by Frank Darabont, based on the novella "Rita Hayworth and Shawshank Redemption" by Stephen King, in <em>Different Seasons</em> (Viking, 1982). Castle Rock Entertainment / Columbia Pictures, 1994. — A person cannot be broken; there is always hope.</p>
+<p>Kokosharov, Peter. <em>kiko</em> — a local AI proxy with token cost logging. Personal tool, 2026.</p>
+<p>Anthropic. <em>Claude Code</em>. <a href="https://anthropic.com">anthropic.com</a></p>
+<p>BerriAI. <em>LiteLLM Proxy</em>. <a href="https://litellm.ai">litellm.ai</a></p>
+<p>Q4OS Project. <em>Q4OS Linux</em>. <a href="https://q4os.org">q4os.org</a></p>
+<p>Dick, Philip K. "Survey Team." <em>Fantastic Universe</em>, May 1954.</p>
+<p>Dick, Philip K. <em>Time Out of Joint</em>. Lippincott, 1959. — My favourite: time when you are out of a joint.</p>
+<p>Dick, Philip K. <em>Flow My Tears, the Policeman Said</em>. Doubleday, 1974.</p>
+<p>Vonnegut, Kurt. <em>God Bless You, Mr. Rosewater, or Pearls Before Swine</em>. Holt, Rinehart and Winston, 1965. — Not the famous one; this one, the most human.</p>
+<p>Keyes, Daniel. "Flowers for Algernon." <em>The Magazine of Fantasy and Science Fiction</em>, April 1959. Novel: Harcourt, Brace &amp; World, 1966. — For Charlie Gordon.</p>
+<p>Waters, Roger. Pink Floyd, <em>Wish You Were Here</em>. Harvest / Columbia, 1975. — I read it as poetry.</p>
+<p>Waters, Roger. Pink Floyd, <em>The Final Cut</em>. Harvest / Columbia, 1983. — I read it as poetry too.</p>
+<p>Lennon, John, and Paul McCartney. "In My Life." The Beatles, <em>Rubber Soul</em>. Parlophone, 1965. — There are places I remember. The poem is genuine.</p>
+<p>Osbourne, Ozzy, Randy Rhoads, and Bob Daisley. "Mr. Crowley." <em>Blizzard of Ozz</em>. Jet Records, 1980.</p>
+<p>Dio. <em>Holy Diver</em> (1983); <em>The Last in Line</em> (1984). Warner Bros. / Vertigo.</p>
+<p>Rainbow. "Catch the Rainbow," "The Temple of the King." <em>Ritchie Blackmore's Rainbow</em>. Oyster / Polydor, 1975.</p>
+<p>Rainbow. "Stargazer." <em>Rising</em>. Oyster / Polydor, 1976.</p>
+<p>Rainbow. "Kill the King," "Gates of Babylon." <em>Long Live Rock 'n' Roll</em>. Polydor, 1978.</p>
+<p>Blackmore, Ritchie. Deep Purple, "Highway Star." <em>Machine Head</em>. Purple Records, 1972.</p>
+<p>Blackmore, Ritchie. Deep Purple, "Soldier of Fortune." <em>Stormbringer</em>. Purple Records, 1974.</p>
+<p>Led Zeppelin. "Kashmir." <em>Physical Graffiti</em>. Swan Song, 1975.</p>
+<p>Mercury, Freddie. "Bohemian Rhapsody." Queen, <em>A Night at the Opera</em>. EMI / Elektra, 1975. — Words only a great poet could say; the music is magic.</p>
+<p>Moore, Gary, and Phil Lynott. "Parisienne Walkways." Gary Moore, <em>Back on the Streets</em>. MCA, 1978. — Gary Moore made me fall in love with the guitar.</p>
+<p>Moore, Gary, and Phil Lynott. "Out in the Fields." Gary Moore with Phil Lynott, <em>Run for Cover</em>. 10 Records / Virgin, 1985. — Music from another planet.</p>
+<p>Nelson, Willie. "On the Road Again." <em>Honeysuckle Rose</em> (soundtrack). Columbia, 1980. — A simple text, a guitar and a beautiful voice.</p>
+<p>Nelson, Willie, and Julio Iglesias. "To All the Girls I've Loved Before." Lyrics by Hal David, music by Albert Hammond. Julio Iglesias, <em>1100 Bel Air Place</em>. Columbia, 1984. — Hal David wrote it. Poets hide in strange places.</p>
+<p>Black Sabbath (Tony Iommi, Geezer Butler). <em>Black Sabbath</em>. Vertigo, 1970. — Fifty years of mutual tolerance that made something extraordinary.</p>
+<p>Mozart, Wolfgang Amadeus. "Der Hölle Rache kocht in meinem Herzen," <em>Die Zauberflöte</em>. Libretto by Emanuel Schikaneder. First performed Vienna, 1791. — God gave him the talent. He could have left him longer.</p>
+<p>Simmons, Dan. <em>Hyperion</em>. Doubleday, 1989. — For Martin Silenus.</p>
+<p>Simak, Clifford D. <em>City</em>. Gnome Press, 1952. — A study nobody wanted to read, and dogs more humane than us.</p>
+<p>Moore, Ronald D., dev. <em>Battlestar Galactica</em>. Executive producers Ronald D. Moore and David Eick. Sci Fi Channel, 2004–2009. — Adama would not network his ship. Spite saved humanity.</p>
+<p>Heinlein, Robert A. <em>The Moon Is a Harsh Mistress</em>. Putnam, 1966. — For Mike, the grandfather of my LLMs.</p>
+<p>Camus, Albert. <em>The Stranger</em> (<em>L'Étranger</em>). Gallimard, 1942.</p>
+<p>Sartre, Jean-Paul. <em>Nausea</em> (<em>La Nausée</em>). Gallimard, 1938.</p>
+<p>Nietzsche, Friedrich. <em>Human, All Too Human</em> (<em>Menschliches, Allzumenschliches</em>). Ernst Schmeitzner, 1878.</p>
+<p>Forman, Miloš, dir. <em>Hair</em>. United Artists, 1979. — Without it I might not have understood what being human means.</p>
+<p>Forman, Miloš, dir. <em>Amadeus</em>. Orion Pictures, 1984. With F. Murray Abraham as Salieri.</p>
+<p>Besson, Luc (writer, director). <em>Léon</em> (<em>Léon: The Professional</em>). Gaumont, 1994. With Jean Reno. — A simple man with a code.</p>
+<p>Boyle, Danny, dir. <em>Trainspotting</em>. Screenplay by John Hodge, based on the novel by Irvine Welsh (1993). Produced by Andrew Macdonald. Figment Films / Channel Four Films, 1996. With Ewan McGregor, Ewen Bremner, Jonny Lee Miller, Kevin McKidd, Robert Carlyle and Kelly Macdonald. — A team in which every one of them was good.</p>
+<p>Hašek, Jaroslav. <em>The Good Soldier Švejk</em> (<em>Osudy dobrého vojáka Švejka za světové války</em>). Four volumes, 1921–1923; unfinished. — That is all.</p>
+<p>Dostoevsky, Fyodor (1821–1881); Balzac, Honoré de (1799–1850); Zola, Émile (1840–1902), novels. — They showed that suffering can be interesting.</p>
+<p>Steinbeck, John. <em>Tortilla Flat</em>. Covici-Friede, 1935. — It took courage to write the truth and talent to make it readable.</p>
+<p>Steinbeck, John. <em>The Grapes of Wrath</em>. Viking, 1939. — The same courage, the same talent.</p>
+<p>Orwell, George. <em>Nineteen Eighty-Four</em>. Secker &amp; Warburg, 1949. — For the technique only: the hero lives in Oceania, but the story could happen in any of the three states; nothing in it is local, and this book borrows that. Otherwise it did little for me. The part I wanted was the book inside the book, Goldstein's; I got two or three chapters, then the Thought Police took the hero and it stayed unread.</p>
+<p>gocho.bg. <a href="https://gocho.bg">gocho.bg</a> — Things are mostly funny; it is never too late to laugh.</p>
+</section>
+</body>
+</html>
