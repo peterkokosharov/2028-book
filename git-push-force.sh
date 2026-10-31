@@ -1,8 +1,6 @@
 #!/bin/sh
-# SPDX-License-Identifier: MIT
-# One-shot deploy for 2028-kindle
-# Reads token from ~/github_token, prompts if missing
-# Builds EN HTML + EPUB before pushing
+# Force push 2028-kindle to GitHub (abort any rebase first)
+# Reads token from ~/github_token
 
 set -eu
 
@@ -13,11 +11,6 @@ TOKEN_FILE="$HOME/github_token"
 
 cd "$REPO_DIR"
 
-# Build EN
-echo "Building EN HTML + EPUB..."
-python3 -I tools/build_en.py
-
-# Read token from file or prompt
 if [ -f "$TOKEN_FILE" ] && [ -r "$TOKEN_FILE" ]; then
     GH_TOKEN="$(cat "$TOKEN_FILE" | tr -d '[:space:]')"
     [ -n "$GH_TOKEN" ] || { echo "Token file empty: $TOKEN_FILE" >&2; exit 1; }
@@ -32,6 +25,9 @@ else
     [ -n "$GH_TOKEN" ] || { echo "Empty token" >&2; exit 1; }
 fi
 
+# abort any in-progress rebase
+git rebase --abort 2>/dev/null || true
+
 # init remote if missing
 git remote get-url origin >/dev/null 2>&1 || \
   git remote add origin "https://${GH_USER}:${GH_TOKEN}@github.com/${GH_USER}/${GH_REPO}.git"
@@ -39,5 +35,5 @@ git remote get-url origin >/dev/null 2>&1 || \
 # ensure main branch
 git branch -M main
 
-# push
-git push -u origin main
+# force push (overwrite remote with local)
+git push -u origin main --force
