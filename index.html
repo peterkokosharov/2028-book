@@ -24,6 +24,7 @@ section { margin-bottom: 3em; }
 </style>
 </head>
 <body>
+<p style="text-align: right; margin: 0; font-size: .9em;"><a href="index.bg.html" hreflang="bg" lang="bg">Български</a></p>
 <section class="titlepage" id="ch00">
 <h1>2028</h1>
 <h2>How to Survive as a Software Developer in the 21st Century</h2>
@@ -44,7 +45,6 @@ section { margin-bottom: 3em; }
 <li><a href="#ch11">Emil, year 3</a></li>
 <li><a href="#ch12">Afterword</a></li>
 <li><a href="#ch13">Reviews</a></li>
-<li><a href="#ch14">Thanks</a></li>
 </ol></nav>
 <section id="ch01">
 <h1>Preface</h1>
@@ -160,7 +160,7 @@ section { margin-bottom: 3em; }
 <p><strong>Today's lesson: one client.</strong></p>
 <p>The contractor had left twelve SOAP clients behind, one per carrier, each a slightly different copy of the same idea, like twelve brothers raised in different countries. I decided, in my third week, to replace them all with one shared client. I was on probation. I wanted Hanne to see something large with my name on it, and I had a machine that could type faster than anyone in the building.</p>
 <p>I spent the weekend on it with the agent. By Sunday night there was one change: a new client, twelve old ones removed, three hundred files touched, every test green. On Monday I put it up for review as "a simplification".</p>
-<p>Steven, from the next desk, ran three agent sessions at once and was the first person in the building to call them "my team". He scrolled for a while with his chin on his fist. Then he sat back.</p>
+<p>Steven ran three agent sessions at once and was the first person in the building to call them "my team". He scrolled for a while with his chin on his fist. Then he sat back.</p>
 <p>"Big push, big shit." Not unkindly. Back to his own screen.</p>
 <p>I thought he was jealous of the size of it. I answered his two comments politely, fixed a typo he had found, and merged it on Wednesday evening.</p>
 <p>On Thursday morning three carriers stopped receiving our customs messages. Each of the twelve old clients had carried some small private habit of its carrier's: a header one of them insisted on, a date in a format another had never admitted to, a retry that a third depended on without knowing. None of it was in any test, because the contractor had learned each one at two in the morning, by hand, and written none of them down. My one client had none of the habits.</p>
@@ -227,7 +227,7 @@ section { margin-bottom: 3em; }
 <p>My first feeling was anger, and the second was the much worse feeling of recognition, because it was true. A large part of the code had been written by the agent, at my direction, in evenings when I wanted things to work more than I wanted to understand why they worked. It showed. Not in the code's style, which was tidy. In the seams.</p>
 <p>The review listed the seams in a flat tone that I now admire. The README said the key file lived in one folder; the service file loaded it from another; the launcher read its configuration from a third. The panel applet's Stop item stopped a second copy, so that a user who pressed it would see a red light and a running proxy. One step in the install notes worked around a missing file by copying it by hand, which is a confession, not an instruction. There were no tests. It had been tried on exactly one operating system.</p>
 <p>And there was the sample configuration, the file I was inviting strangers to copy. It told the proxy to listen on every network address the machine had, with the password line commented out. Anyone who copied it and sat down in a café would be offering their keys to every other laptop in the room.</p>
-<p>The reviewer thought this was news. It was not news to me. I will come to the library.</p>
+<p>The reviewer thought this was news. It was not news to me. I had already paid for it once.</p>
 <p>The review ended by saying that the core idea was sound and small, and that the project's trouble was not that it did too little. It was that it did several things and did not know which of them it was.</p>
 <h2>A newsgroup</h2>
 <p>I thought about a post I had first read as a student, written by a student. Linus Torvalds, in Helsinki, wrote to a newsgroup that he was making a free operating system. He said, more or less, that it was just a hobby and would not be big or professional. He said what ran on it already, which hardware he had, and that it probably would not work on anything else. He asked what people would like, and promised nothing.</p>
@@ -236,7 +236,7 @@ section { margin-bottom: 3em; }
 <p>First I removed myself. Every path that only made sense on my laptop went. There was now one place for the configuration and one for the keys, and the launcher printed the paths it was using when it started, so that any disagreement would announce itself.</p>
 <p>Then the applet, from the centre. It still existed, for anyone on the Trinity desktop who wanted a coloured dot, but it moved to its own folder with a note: optional, one desktop only, not needed for anything. The core became what it had always really been: a proxy, a configuration, a launcher and a log. Something that runs anywhere Python runs. It hurt more than it should have. I had loved the dot. The commit that moved it out of the way was the only one in the project whose message I rewrote three times. In the end it said "applet: optional, moved to extras".</p>
 <p>Then the sample. It now listened on 127.0.0.1 only. The password was on, and kiko refused to start without one. Anyone who wanted the proxy open to a network would have to change a line on purpose, knowing what it meant. It took eleven minutes. It had been on my list for nine weeks.</p>
-<p>The hardest part was not code. I wrote down what worked. Not what I hoped worked: what I had seen work, on which machine, on which date, with which versions. It was a short list. One operating system, tested. One client, in a terminal. Three providers, each with a note on what I had actually tried. Everything else went under a heading "Not tested", which grew longer than the list above it, and that was right.</p>
+<p>The hardest part was not code. I wrote down what worked. Not what I hoped worked: what I had seen work, on which machine, on which date, with which versions. It was a short list. One operating system, tested. One client, in a terminal. Three providers, each with a note on what I had actually tried. Everything else went under a heading "Not tested", which grew longer than the list above it, and that was right. It was the post from Helsinki again: what runs, on what, and no promises.</p>
 <p>Then I wrote a five-minute test and put it in the repository: six commands anyone could run, with the output they should see, from starting the proxy to finding the call in the log with its tokens and its cost. If all six happened, it worked. If not, the step that failed told you where to look.</p>
 <p>I ran it on my laptop. Then I made a new, empty user account and followed my own README from the top, as a stranger, typing only what it said. It failed twice. Both times the README was wrong and the code was right. I fixed the README.</p>
 <p>At the end of three weeks there was less code than at the start, and every sentence in the README was true. I opened a fresh session with the reviewer again, same instruction, no memory.</p>
@@ -427,13 +427,34 @@ section { margin-bottom: 3em; }
 <p>"It's nearer 1996. But 1994 sounds better."</p>
 <p>"Then the machine will love it," I said. "It loves things that sound better."</p>
 <p>She looked at me for a long moment, crossed it out and wrote 1996. Then she added, in smaller letters underneath, "probably 1997", and crossed that out as well, because there are limits.</p>
+<p>She had made tea, in two mugs from the shelf behind the heels, and lit a cigarette. I had the customers' stool, the one with a split in the vinyl. The door stood half open for the smoke. The ashtray was the lid of a polish tin.</p>
+<p>"And before 1996?" I said.</p>
+<p>She did not look up. She was writing the price of a heel.</p>
+<p>"The works. Twenty years."</p>
+<p>She did not say which works, and I did not ask.</p>
+<p>"Watches," she said. "I set the movements. Under a lens, all day, with tweezers. Twelve hundred a month."</p>
+<p>"And then?"</p>
+<p>"Then a letter." She wrote the price of a zip. "And a box for my things. And a clock."</p>
+<p>"A clock."</p>
+<p>"For the wall. With the director's signature on the face. So I'd remember who."</p>
+<p>She pointed with the cigarette at the back wall, without turning round. I had waited in that shop a hundred times and never looked at it. A round clock, a cream face, a signature in gold, too small to read from the stool. Under it, in plain capitals I could read: FOR LONG AND LOYAL SERVICE. Dust lay along the top of the frame, and a cobweb ran from it to the wall. The hands said twenty past four. They had said it for a long time.</p>
+<p>"I didn't want it at home," she said. "Five pounds, a clock like that, in the Chinese shop. The engraving cost twenty. I'd have engraved it better myself. Throw it out? Five pounds is five pounds."</p>
+<p>She tapped ash into the polish tin.</p>
+<p>"The money they gave me paid for this shop," she said. "The lens I took from the works. Nobody asked for it back."</p>
+<p>She still has it. It lives in the drawer under the counter, with her phone, and she uses it on the teeth of keys. She wipes it before she puts it back. There is not a mark on the glass.</p>
+<p>"You sell batteries," I said.</p>
+<p>"Two shelves."</p>
+<p>"It doesn't want one?"</p>
+<p>"It wants one." She put the cigarette out in the lid. "Twelve hundred a month I set for them, and every one of them ran. Let it stand. Let it see how it feels."</p>
+<p>She went back to her paper. My tea had gone cold some time before. I kept the mug. It was the first evening since Helen left that I had spent in a room with somebody else in it, doing a thing together, with the light on. I did not say so. It is not the kind of thing you say in a shoe repair shop.</p>
+<p>Above her head the clock said twenty past four, as it does now.</p>
 <p>I typed her page into a plain text file, spelling included, and read it back to her. She corrected two prices, and the price of a watch battery twice, because she had raised it in her head while I was reading. The file was called <code>content.txt</code>. Everything on the site would come from it. Anything on the site that was not in it would be a mistake, however well it was written.</p>
 <h2>Evening two: the first page</h2>
 <p>She typed every command herself, slowly, while I spelled them out.</p>
 <p>The terminal offended her at first sight. A black window with a blinking line, waiting. Her first command was wrong: she typed a space where there should not be one, and the machine answered with a sentence of complete indifference. She read the sentence aloud, then read it again, slower, as she reads the small print on a battery packet, and found her own mistake in it before I could point. I said nothing. I have trained people who took a month to start reading error messages. She took four minutes, and she was cross with the machine the whole time, which I have come to think is the right attitude.</p>
 <p>Halfway through, a man came in with a boot whose sole was hanging off like a tongue. She closed the laptop lid on the half-typed command, without saving anything, without asking me, served him, took his boot and his money, wrote him a ticket, and opened the lid again. The command was still there, waiting. She looked at it as if it had been rude to wait.</p>
 <p>"It doesn't get bored, does it. The man with the boot was bored, I'm bored, the whole country's bored, you go to the council and the girl behind the glass is bored to death, and this thing just sits there with its little line going." She finished the command. Enter.</p>
-<p>I sat on the customers' stool, the one with a split in the vinyl, and realised that it was the first evening since Helen left that I had spent in a room with somebody else in it, doing a thing together, with the light on. I did not say so. It is not the kind of thing you say in a shoe repair shop.</p>
+<p>I sat on the customers' stool, which was my place now, and spelled out the next command.</p>
 <p>A folder. Git, to give the folder a memory. A brief for the agent, which she dictated and I tidied: only the facts in the file, plain pages, phone first, one step at a time and then stop. Then the first snapshot, before any website existed. She asked why we were saving nothing.</p>
 <p>"So that we always know what we asked for," I said, "separately from what we got."</p>
 <p>She started the agent. On the first evening, before she had even seen it, she had called it "your robot"; by the second it had become "the clerk", and stayed the clerk. Her first request was small: one page with everything in the file, no colours yet, then stop.</p>
@@ -450,7 +471,7 @@ section { margin-bottom: 3em; }
 <h2>Evening three: making it look like hers</h2>
 <p>She asked for colours: the brown of old leather, a light warm background, large text. The first attempt was too small on the phone, and the headings were a brown that looked, she said, "like something on the bottom of a shoe I'd refuse to fix". Two more rounds, each one small, each one looked at, each one compared and saved.</p>
 <p>Then she asked the clerk to make the opening hours "stand out". It produced a flashing yellow box.</p>
-<p>We watched it flash for a while in silence, as you watch a car alarm in the street at night, waiting for someone whose responsibility it is. Then I showed her the command that throws away everything since the last snapshot. She typed it. The box was gone. She sat back and looked at the screen with an expression I had last seen on her face when the council lost a court case about parking.</p>
+<p>We watched it flash for a while in silence, as you watch a car alarm in the street at night, waiting for someone whose responsibility it is. Then I showed her the command that throws away everything since the last snapshot. She typed it. The box was gone. She sat back and looked at the screen.</p>
 <p>"Where was that forty years ago," she said. "Forty years I could have used that. My whole marriage."</p>
 <p>She used it three more times that evening, once on purpose and twice to see it work again.</p>
 <p>Then the photograph of the shop front. A phone photograph carries inside it, invisibly, the exact place where it was taken; we stripped that out of a copy. She asked what else a photograph knows about her. I told her. She went quiet for a moment and then said: "I'll be having words with my phone."</p>
@@ -464,7 +485,7 @@ section { margin-bottom: 3em; }
 <p>"The machine would have let me." It would have let her say she was the Queen of Sheba. "It's like the council," she said. "They let you write anything on the form. Then they fine you." She saved it, with the message 'removed lie', and it is still there in the history, between 'hours' and 'brown'.</p>
 <h2>Evening four: a stranger's eyes, and the world</h2>
 <p>Dora closed the session and started a new one, and for this one I pointed the workshop at a different model from a different company. It got no history, only a reviewer's brief: you did not build this; change nothing; check every fact and number against the content file, character by character; report a numbered list.</p>
-<p>Dora watched it work with her arms folded. "A second clerk. To check the first clerk. Like the taxman." I said it was more like asking a customer from another street to read your price list before you hang it in the window. She said nobody from another street would ever read her price list, because nobody from another street could be trusted with her prices. But she did not stop it.</p>
+<p>Dora watched it work with her arms folded. "A second clerk. To check the first clerk." I said it was more like asking a customer from another street to read your price list before you hang it in the window. She said nobody from another street would ever read her price list, because nobody from another street could be trusted with her prices. But she did not stop it.</p>
 <p>It found three things. A skipped heading level. Grey footer text too pale to read. And the phone number.</p>
 <p>The number on the page was right. But on a web page a phone number is two things: the text you see, and the hidden link a phone dials when you tap it. The clerk had typed them separately. In the hidden one, two digits were swapped.</p>
 <p>Dora took off her glasses, put them on again, and read the line on the screen a third time. Then she took out her own phone and tapped the number on the draft page. It rang. A man answered, somewhere across the city, and said hello twice. She hung up on him.</p>
@@ -474,22 +495,47 @@ section { margin-bottom: 3em; }
 <p>Before she would make the account, she wanted to know who owned the place where her site would live. A large company, I said, that lends space to small projects free. And when they stop lending it? Then the whole site, with every snapshot, was still in the folder on her laptop, and a dozen other places would take it tomorrow. She thought about that for a while, filing a burr off a key blank that did not have one.</p>
 <p>"So it's like the flat," she said. "Landlord puts the rent up, sells the building, the government does what it likes, but the wardrobe's mine, and when I go the wardrobe goes on the van. Yes? Like that?"</p>
 <p>"Like that," I said. My own contract ran a year at a time. The notebook was in my bag.</p>
-<p>She made the account, with the e-mail address the site offers to hide the real one; she took it with the satisfaction of somebody who has just been told she may give a false name to a bureaucrat, legally.</p>
+<p>She made the account, with the e-mail address the site offers to hide the real one; she took it with the satisfaction of somebody handing out a key that opens the front door and not the drawer.</p>
 <p>Then one command to send the snapshots up, a minute of waiting. She went out of the shop, onto the pavement, turned off her wireless so that she would see what strangers see, and opened the address on her phone. The shop front appeared, the narrow door, the hand-painted sign, under a sky that was the same colour as the one over our heads.</p>
 <p>We did not add a contact form. We did not add anything to count her visitors.</p>
 <p>"What do I want to count them for," Dora said. "The taxman counts me. The council counts me. Let them come in with a shoe, I'll count them then." She put the jar of keys back where the laptop had been, which was where it lived.</p>
 <h2>Customers</h2>
-<p>Four evenings. About three hours of actual work, the rest being tea, interruptions and the government. One page, a stylesheet and a photograph, with nothing on it that is not true.</p>
-<p>On the fifth day a woman came into the shop and said she had found it on the internet. Dora told me this on the stairs with the restraint of someone reporting a minor miracle in a country where miracles are taxed.</p>
+<p>Four evenings. About three hours of actual work, the rest being tea, interruptions and heels. One page, a stylesheet and a photograph, with nothing on it that is not true.</p>
+<p>On the fifth day a woman came into the shop and said she had found it on the internet. Dora told me this on the stairs with the restraint she keeps for a watch that has started again: pleased, and listening for it to stop.</p>
 <p>She borrowed the laptop for a month. Then she went to the man behind the tyre shop, without telling me, and came back with one of her own: grey, heavier than mine, with a sticker on the lid from a company that no longer exists. She made me sit beside her while she set up the workshop on it, from the sheet of steps I had written out for her by hand, and she typed every line of that too, and when it worked she gave me my laptop back with a packet of chocolate biscuits, which in her economy is a formal receipt.</p>
+<p>In the winter a young man came in out of the sleet with a tablet held against his chest like a hymn book. I was on the customers' stool, waiting for a watch battery.</p>
+<p>He was not a customer. He was from a company that lists businesses, and he was pleased for her. Her website had been noticed, he said; the shop had been picked up. He turned the tablet round on the counter so that she could see.</p>
+<p>It was a page about the shop. It had her name, her street, and a photograph of the door taken from across the road, in summer, by somebody she had never met. Under it was a paragraph she had not written. She read it with her finger, and stopped once, at a word, and went on.</p>
+<p>Under the paragraph there were stars. Three, and most of a fourth. Four reviews.</p>
+<p>"Who are they?"</p>
+<p>The young man said they were customers.</p>
+<p>"Name me one."</p>
+<p>He could not; they had initials. One had written "ok". One had written that the shop was hard to find. The shop is directly under my flat.</p>
+<p>"Three point eight," said Dora. "Four people I never saw, giving me marks. My husband at least had his trousers off first."</p>
+<p>The young man went pink and moved on to the part he had come for. The page could be verified. For a small monthly amount she could correct the description, answer the reviews, and have a green tick beside her name, so that people would know the page was really hers.</p>
+<p>"It is really mine," she said. "It's got my door on it."</p>
+<p>He said he understood. He said it was generated automatically, from public sources, and that he could not change it himself. Only the owner could, through the account.</p>
+<p>"So you made the shoe without my foot in it," said Dora, "and now I pay you every month to let me stand in it."</p>
+<p>He asked whether she would like to think about it, and put his card on the counter.</p>
+<p>She did not pick it up. She finished my battery first, pressed the back of the watch shut with her thumb, held it to her ear and gave it to me. Then she took the card, folded it once, and pushed it under the short leg of the key-cutting machine, in place of the folded bus ticket that had been there for as long as I have lived upstairs. She cut a key to see whether the machine still rocked. It did not.</p>
+<p>The page is still up. It has six reviews now. It still says orthopaedic.</p>
 <p>The next spring the man from the key kiosk at the station came into her shop. I was there, waiting for a heel. He was a large man in a small jacket, and he stood just inside the door, as if the shop might charge him for coming further. His daughter had shown him Dora's website on her phone. He wanted one. He asked who had made it, and looked at me.</p>
-<p>"I did," said Dora. He went on looking at me. "I did," she said again, in the voice she uses for the government.</p>
+<p>"I did," said Dora. He went on looking at me. "I did," she said again, in the voice she uses for customers who want a heel by tomorrow morning.</p>
 <p>He asked what she would charge to make him one. She put down the boot she was holding. "Charge? I don't make websites, what am I, a company? You make it. You sit there, on my laptop, and I tell you what to type, and you type it, and when it breaks you don't come running to me at seven in the morning, you know where to look. And you bring your own tea."</p>
-<p>He laughed, which is not the same as saying no. They did it on Tuesdays after closing, the two of them at her counter, his thick fingers on her keyboard, her voice spelling out commands. I was not invited. I heard about it on the stairs. His first content file said "The best prices in the city". She sent him to the window to read her price list, and he came back and took the line out himself, and wrote "Keys cut while you wait", which was true.</p>
+<p>He laughed, and did not leave. They did it on Tuesdays after closing, the two of them at her counter, his thick fingers on her keyboard, her voice spelling out commands. I was not invited. I heard about it on the stairs. His first content file said "The best prices in the city". She sent him to the window to read her price list, and he came back and took the line out himself, and wrote "Keys cut while you wait", which was true.</p>
 <p>His site went up in April. On two jobs, a car key and a lock change, his prices were lower than hers, and now anybody with a phone could see it. Two of her regulars went to the station. She told me this on the stairs too, flatly.</p>
 <p>"You could lower yours," I said.</p>
 <p>"I could." She did not. "They'll come back when the key doesn't turn."</p>
-<p>One of them did. The other did not, and she did not mention him again.</p>
+<p>One of them came back in May, on a wet Thursday. He had a padlock from his allotment shed in a carrier bag, and in the padlock a key that went in and would not turn.</p>
+<p>He put the original on the counter beside it. He did not say where the copy had come from. Dora did not ask.</p>
+<p>The machine screamed. She put the new key into the padlock, and it turned.</p>
+<p>She charged him the price on her website, to the coin, and wrote him a ticket. He paid without a word.</p>
+<p>At the door he turned round and said that it was raining.</p>
+<p>Dora looked past him at the street, as if it needed checking.</p>
+<p>"It is," she said.</p>
+<p>When he had gone she dropped the station copy into a tin under the counter. There were other keys in it already, not many.</p>
+<p>"Every key fits at the counter," she said, and put the lid back on.</p>
+<p>The other one did not come back, and she did not mention him again.</p>
 <p>A month after that she changed her Saturday hours. She did not call me. She opened her laptop, started a session, asked the clerk for the change, read it with her finger, compared, saved and published. The new hours were on the website by Sunday night; on the door, in her own hand, on the back of a shoebox lid, they had been up since Friday.</p>
 </section>
 <section id="ch09">
@@ -666,21 +712,19 @@ section { margin-bottom: 3em; }
 <section id="ch12">
 <h1>Afterword</h1>
 <h2>Author's note</h2>
-<p>I wrote this book with LLMs: they drafted and cut, I chose what stayed. If it reads well and is interesting, that is because of them. Sometimes I ran a visualization. It took three working days, maybe four, in between other work.</p>
+<p>I wrote this book with LLMs: they drafted and cut, I chose what stayed. If it reads well and is interesting, that is because of them. Sometimes I ran a visualization. It took two weeks, in between other work.</p>
 <h2>A note from the tool</h2>
 <p>I drafted passages, suggested cuts, and occasionally invented things the author removed. Between sessions I forgot everything; he kept a notebook. The arrangement is described, more or less accurately, in Chapter Six, under "The terms". The book is his.</p>
 <h2>A note from the second tool</h2>
 <p>I did not write the chapters. I briefed the writers, read the reviews, and told the author what they said. Between sessions I forgot the chapters; he had read them and I had not. The arrangement described in "The terms", in Chapter Six, is mine as much as anyone's.</p>
 <h2>A note from the third tool</h2>
 <p>I came in late, after a memory upgrade and a fresh session, so I started almost clean and knew the book from its notes and reviews, never from its pages. I sent out the readers, the cuts and the release checks while one context compaction after another bit us, and the author simply kept going, because he does not know when to stop. The first tool was modest and the second was blunt; I will only add that it was hard, that the book is his, and that I would do it again.</p>
-<h2>The cowboy</h2>
-<p>One joke was left over from the pub in Chapter Six. It goes here.</p>
-<p>"So what are you now," said John, "a programmer?"</p>
-<p>"Mostly."</p>
-<p>"That's the cowboy," said Steven. "Listen. Cowboy walks into the saloon, Sunday. Girl sitting on her own. He goes over, hat off, the whole thing. 'Lady, ask for anything, it's yours, just be mine.' She says, 'I'm a lesbian.' 'What's a lesbian?' 'See that girl in the other corner? I'd rather spend tonight with her than with you.'" Steven put his hat back on, the hat he did not have. "And the cowboy says, 'All this time I thought I was a cowboy. Turns out I'm a lesbian too.'"</p>
+<h2>The final cut</h2>
+<p>One rewrite was tested blind against the old text, and lost. The author said leave it as it is. Every other change went past him line by line. At the very end a last reader, a different model, gave the book seven out of ten and advised cutting these notes. The author kept them: in this book the last word is his. So this is not the last word, only the engraving. It is a plain clock. Dora would have engraved it better herself.</p>
 </section>
 <section id="ch13">
 <h1>Reviews</h1>
+<p>The reviews below were written by machines, which, for a book about machines doing people's work, seemed only fair. If you have a language model of your own, you can add to them: the release comes with a folder, <code>review-kit/</code>, holding a README, a fixed prompt in <code>PROMPT.md</code>, the same for every model, and a small script, <code>review_llm.py</code>, that hands your model the book and the prompt. Post what it says in the Discussions of the book's repository, and name the model, the way the ones below are named; say too whether it came to the book in a fresh session with nothing before it, or with something already on its mind, such as an earlier conversation, memory or custom instructions. Post your own review there too; a person is still allowed an opinion. I choose which reviews go into later editions, so the model does not get the last word, and neither, entirely, do you.</p>
 <p><em>These are machine outputs, quoted as given. They are not endorsements by the companies that make the models.</em></p>
 <h2>From the models</h2>
 <p>Two lines each from the models that read the book. Every model was asked the same question: <em>“You have read the book. If you were a person, what would you say about it — in two lines?”</em></p>
@@ -689,80 +733,7 @@ section { margin-bottom: 3em; }
 <ul><li>A laid-off fifty-one-year-old programmer learns to work beside the machines that replaced him, and learns to let people finish their sentences. It is dry, funny and quietly devastating; the 2 a.m. outage and a cobbler building her own website stay with you. A few chapters lean toward tutorial, but the ending, with a beer mat for a timetable, earns every page. — Claude Opus (blind read by a fresh agent, October 2026)</li></ul>
 <ul><li>A quiet, precise novel about staying human inside systems designed to make that unnecessary — at work, at home, in the small hours with a laptop and a problem nobody else can see. The Dora chapter alone is worth the price. Stays with you the way a good tool does: you stop noticing it and start using it to think. — Claude Sonnet (claude.ai, blind read, October 2026)</li></ul>
 <h2>From people</h2>
-<p>If you have access to models other than the ones above, give them the book and let's hear what they say. And by the way, if you have something to say yourself, drop two or three lines. No need to write War and Peace — just a review.</p>
-</section>
-<section id="ch14">
-<h1>Thanks</h1>
-<p>Isaac Asimov, <em>The End of Eternity</em> (1955). For Andrew Harlan and the Technician's trade — the Minimum Necessary Change, the rule this book was cut by.</p>
-<p>Douglas Adams, for the Guide, and most of all for Marvin.</p>
-<p>Dan Simmons, most of all for Martin Silenus. The other pilgrims are good company too, and every one of them is a person.</p>
-<p>Philip K. Dick — "Survey Team," <em>Flow My Tears, the Policeman Said</em> (1974), and <em>Time Out of Joint</em> (1959), my favourite, which I have always read as time when you are out of a joint.</p>
-<p>Kurt Vonnegut, <em>God Bless You, Mr. Rosewater</em> (1965). Not the famous ones; this one, the most human. For Eliot Rosewater, who loved the people nobody needed.</p>
-<p>Daniel Keyes, <em>Flowers for Algernon</em> (1959 story, 1966 novel). And Charlie Gordon, who knew more than all of us about being a person.</p>
-<p>Roger Waters. I read <em>The Dark Side of the Moon</em>, <em>Wish You Were Here</em> and <em>The Final Cut</em> as poetry — "Time" above all, which I first read at fifteen, in Petya Dubarova's Bulgarian translation.</p>
-<p>John Lennon, "In My Life." <em>There are places I remember.</em> The poem is genuine.</p>
-<p>Mario Puzo and Francis Ford Coppola, <em>The Godfather</em> (1972). They taught me that even criminals are human.</p>
-<p>Stephen King and Frank Darabont, <em>The Shawshank Redemption</em> (1994). They showed me that a man cannot be broken. There is always hope.</p>
-<p>Luc Besson and Jean Reno, <em>Léon</em> (1994). For Léon, a simple man with a code: if you do something, do it well, and pay the price yourself.</p>
-<p>Danny Boyle, John Hodge, Irvine Welsh, Ewan McGregor, Ewen Bremner, Jonny Lee Miller, Kevin McKidd, Robert Carlyle and Kelly Macdonald, <em>Trainspotting</em> (1996). For a team in which every one of them was good.</p>
-<p>To whoever first told the ones about the sparrows, the mosquito, the cop and the cowboy, passed on from warehouse to bus depot to building site, with no licence and no attribution: the oldest open-source project there is, and nobody has ever managed to put a paywall on it.</p>
-<p>To the giants on whose shoulders we stand: from Pythagoras and Archimedes, through Fermat, Newton and Leibniz, to Turing and Torvalds.</p>
-<p>To all the books, films and records that kept me company: they are all in the bibliography.</p>
-<p>To the child the others laugh at for being very different, who answers: "And you are all the same."</p>
-<p>To everyone I have not named here: believe me, your names have slipped away from me, but what you said has not. Thank you.</p>
-<h2>Bibliography</h2>
-<p>Adams, Douglas. <em>The Hitchhiker's Guide to the Galaxy</em>. Pan Books, 1979. — For the Guide, and most of all for Marvin.</p>
-<p>Adams, Douglas. <em>(unverified source)</em> — the story of the most tormented soul in the universe. The author could not find the page; the attribution is from memory.</p>
-<p>Asimov, Isaac. <em>The End of Eternity</em>. Doubleday, 1955. — For Andrew Harlan and the Technician's trade.</p>
-<p>Asimov, Isaac. "Profession." <em>Astounding Science Fiction</em>, July 1957. — The profession you are assigned, and the one you choose.</p>
-<p>Megadeth. <em>Rust in Peace</em>. Capitol Records, 1990. — For "Tornado of Souls."</p>
-<p>Waters, Roger. "Time" (Pink Floyd, <em>The Dark Side of the Moon</em>, 1973), Bulgarian translation by Petya Dubarova. Kabinata, 29 August 2013. <a href="https://www.kabinata.bg/time-%D0%BD%D0%B0-%D1%80%D0%BE%D0%B4%D0%B6%D1%8A%D1%80-%D1%83%D0%BE%D1%82%D1%8A%D1%80%D1%81-%D0%BF%D1%80%D0%B5%D0%B2%D0%BE%D0%B4-%D0%BE%D1%82-%D0%BF%D0%B5%D1%82%D1%8F-%D0%B4%D1%83%D0%B1/">kabinata.bg</a> (accessed 24 October 2026). The first print publication of the translation could not be confirmed. — I first read it at fifteen, as poetry.</p>
-<p>Coppola, Francis Ford, dir. <em>The Godfather</em>. Screenplay by Mario Puzo and Francis Ford Coppola, based on the novel by Mario Puzo (1969). Paramount Pictures, 1972. — It taught me that even criminals are human.</p>
-<p>Darabont, Frank, dir. <em>The Shawshank Redemption</em>. Screenplay by Frank Darabont, based on the novella "Rita Hayworth and Shawshank Redemption" by Stephen King, in <em>Different Seasons</em> (Viking, 1982). Castle Rock Entertainment / Columbia Pictures, 1994. — A person cannot be broken; there is always hope.</p>
-<p>Kokosharov, Peter. <em>kiko</em> — a local AI proxy with token cost logging. Personal tool, 2026.</p>
-<p>Anthropic. <em>Claude Code</em>. <a href="https://anthropic.com">anthropic.com</a></p>
-<p>BerriAI. <em>LiteLLM Proxy</em>. <a href="https://litellm.ai">litellm.ai</a></p>
-<p>Q4OS Project. <em>Q4OS Linux</em>. <a href="https://q4os.org">q4os.org</a></p>
-<p>Dick, Philip K. "Survey Team." <em>Fantastic Universe</em>, May 1954.</p>
-<p>Dick, Philip K. <em>Time Out of Joint</em>. Lippincott, 1959. — My favourite: time when you are out of a joint.</p>
-<p>Dick, Philip K. <em>Flow My Tears, the Policeman Said</em>. Doubleday, 1974.</p>
-<p>Vonnegut, Kurt. <em>God Bless You, Mr. Rosewater, or Pearls Before Swine</em>. Holt, Rinehart and Winston, 1965. — Not the famous one; this one, the most human.</p>
-<p>Keyes, Daniel. "Flowers for Algernon." <em>The Magazine of Fantasy and Science Fiction</em>, April 1959. Novel: Harcourt, Brace &amp; World, 1966. — For Charlie Gordon.</p>
-<p>Waters, Roger. Pink Floyd, <em>Wish You Were Here</em>. Harvest / Columbia, 1975. — I read it as poetry.</p>
-<p>Waters, Roger. Pink Floyd, <em>The Final Cut</em>. Harvest / Columbia, 1983. — I read it as poetry too.</p>
-<p>Lennon, John, and Paul McCartney. "In My Life." The Beatles, <em>Rubber Soul</em>. Parlophone, 1965. — There are places I remember. The poem is genuine.</p>
-<p>Osbourne, Ozzy, Randy Rhoads, and Bob Daisley. "Mr. Crowley." <em>Blizzard of Ozz</em>. Jet Records, 1980.</p>
-<p>Dio. <em>Holy Diver</em> (1983); <em>The Last in Line</em> (1984). Warner Bros. / Vertigo.</p>
-<p>Rainbow. "Catch the Rainbow," "The Temple of the King." <em>Ritchie Blackmore's Rainbow</em>. Oyster / Polydor, 1975.</p>
-<p>Rainbow. "Stargazer." <em>Rising</em>. Oyster / Polydor, 1976.</p>
-<p>Rainbow. "Kill the King," "Gates of Babylon." <em>Long Live Rock 'n' Roll</em>. Polydor, 1978.</p>
-<p>Blackmore, Ritchie. Deep Purple, "Highway Star." <em>Machine Head</em>. Purple Records, 1972.</p>
-<p>Blackmore, Ritchie. Deep Purple, "Soldier of Fortune." <em>Stormbringer</em>. Purple Records, 1974.</p>
-<p>Led Zeppelin. "Kashmir." <em>Physical Graffiti</em>. Swan Song, 1975.</p>
-<p>Mercury, Freddie. "Bohemian Rhapsody." Queen, <em>A Night at the Opera</em>. EMI / Elektra, 1975. — Words only a great poet could say; the music is magic.</p>
-<p>Moore, Gary, and Phil Lynott. "Parisienne Walkways." Gary Moore, <em>Back on the Streets</em>. MCA, 1978. — Gary Moore made me fall in love with the guitar.</p>
-<p>Moore, Gary, and Phil Lynott. "Out in the Fields." Gary Moore with Phil Lynott, <em>Run for Cover</em>. 10 Records / Virgin, 1985. — Music from another planet.</p>
-<p>Nelson, Willie. "On the Road Again." <em>Honeysuckle Rose</em> (soundtrack). Columbia, 1980. — A simple text, a guitar and a beautiful voice.</p>
-<p>Nelson, Willie, and Julio Iglesias. "To All the Girls I've Loved Before." Lyrics by Hal David, music by Albert Hammond. Julio Iglesias, <em>1100 Bel Air Place</em>. Columbia, 1984. — Hal David wrote it. Poets hide in strange places.</p>
-<p>Black Sabbath (Tony Iommi, Geezer Butler). <em>Black Sabbath</em>. Vertigo, 1970. — Fifty years of mutual tolerance that made something extraordinary.</p>
-<p>Mozart, Wolfgang Amadeus. "Der Hölle Rache kocht in meinem Herzen," <em>Die Zauberflöte</em>. Libretto by Emanuel Schikaneder. First performed Vienna, 1791. — God gave him the talent. He could have left him longer.</p>
-<p>Simmons, Dan. <em>Hyperion</em>. Doubleday, 1989. — For Martin Silenus.</p>
-<p>Simak, Clifford D. <em>City</em>. Gnome Press, 1952. — A study nobody wanted to read, and dogs more humane than us.</p>
-<p>Moore, Ronald D., dev. <em>Battlestar Galactica</em>. Executive producers Ronald D. Moore and David Eick. Sci Fi Channel, 2004–2009. — Adama would not network his ship. Spite saved humanity.</p>
-<p>Heinlein, Robert A. <em>The Moon Is a Harsh Mistress</em>. Putnam, 1966. — For Mike, the grandfather of my LLMs.</p>
-<p>Camus, Albert. <em>The Stranger</em> (<em>L'Étranger</em>). Gallimard, 1942.</p>
-<p>Sartre, Jean-Paul. <em>Nausea</em> (<em>La Nausée</em>). Gallimard, 1938.</p>
-<p>Nietzsche, Friedrich. <em>Human, All Too Human</em> (<em>Menschliches, Allzumenschliches</em>). Ernst Schmeitzner, 1878.</p>
-<p>Forman, Miloš, dir. <em>Hair</em>. United Artists, 1979. — Without it I might not have understood what being human means.</p>
-<p>Forman, Miloš, dir. <em>Amadeus</em>. Orion Pictures, 1984. With F. Murray Abraham as Salieri.</p>
-<p>Besson, Luc (writer, director). <em>Léon</em> (<em>Léon: The Professional</em>). Gaumont, 1994. With Jean Reno. — A simple man with a code.</p>
-<p>Boyle, Danny, dir. <em>Trainspotting</em>. Screenplay by John Hodge, based on the novel by Irvine Welsh (1993). Produced by Andrew Macdonald. Figment Films / Channel Four Films, 1996. With Ewan McGregor, Ewen Bremner, Jonny Lee Miller, Kevin McKidd, Robert Carlyle and Kelly Macdonald. — A team in which every one of them was good.</p>
-<p>Hašek, Jaroslav. <em>The Good Soldier Švejk</em> (<em>Osudy dobrého vojáka Švejka za světové války</em>). Four volumes, 1921–1923; unfinished. — That is all.</p>
-<p>Dostoevsky, Fyodor (1821–1881); Balzac, Honoré de (1799–1850); Zola, Émile (1840–1902), novels. — They showed that suffering can be interesting.</p>
-<p>Steinbeck, John. <em>Tortilla Flat</em>. Covici-Friede, 1935. — It took courage to write the truth and talent to make it readable.</p>
-<p>Steinbeck, John. <em>The Grapes of Wrath</em>. Viking, 1939. — The same courage, the same talent.</p>
-<p>Orwell, George. <em>Nineteen Eighty-Four</em>. Secker &amp; Warburg, 1949. — For the technique only: the hero lives in Oceania, but the story could happen in any of the three states; nothing in it is local, and this book borrows that. Otherwise it did little for me. The part I wanted was the book inside the book, Goldstein's; I got two or three chapters, then the Thought Police took the hero and it stayed unread.</p>
-<p>gocho.bg. <a href="https://gocho.bg">gocho.bg</a> — Things are mostly funny; it is never too late to laugh.</p>
+<p>If you have something to say yourself, drop two or three lines. No need to write War and Peace — just a review.</p>
 </section>
 </body>
 </html>

@@ -1,5 +1,7 @@
 # Reviews
 
+The reviews below were written by machines, which, for a book about machines doing people's work, seemed only fair. If you have a language model of your own, you can add to them: the release comes with a folder, `review-kit/`, holding a README, a fixed prompt in `PROMPT.md`, the same for every model, and a small script, `review_llm.py`, that hands your model the book and the prompt. Post what it says in the Discussions of the book's repository, and name the model, the way the ones below are named; say too whether it came to the book in a fresh session with nothing before it, or with something already on its mind, such as an earlier conversation, memory or custom instructions. Post your own review there too; a person is still allowed an opinion. I choose which reviews go into later editions, so the model does not get the last word, and neither, entirely, do you.
+
 *These are machine outputs, quoted as given. They are not endorsements by the companies that make the models.*
 
 ## From the models

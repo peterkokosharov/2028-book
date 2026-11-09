@@ -8,40 +8,26 @@ Free to read. Not free to sell.
 
 ## Read it
 
-Open `2028.html` in a browser, or read `2028.epub` on an e-reader.
+Online: **https://peterkokosharov.github.io/2028-book/**
 
-On a Kindle: send `2028.epub` with Send to Kindle (by e-mail, the app, or amazon.com/sendtokindle). Newer Kindles can also take the file by USB.
+Or open `index.html` in a browser. It is the whole book on one page: a preface, six chapters with the Emil interludes, an afterword, and reviews. For an e-reader, use `2028.epub`; on a Kindle, send it with Send to Kindle.
 
-## Contents
-
-1. [Preface](source/00a-preface.md)
-2. [Chapter 1: A Laptop Sold by Weight](source/01-a-laptop-sold-by-weight.md)
-3. [Chapter 2: Today's Lesson](source/02-todays-lesson.md)
-4. [Chapter 3: Help Comes to the Simple](source/03-help-comes-to-the-simple.md)
-5. [Emil, month 4](source/03b-emil-month-4.md)
-6. [Chapter 4: What the Machine Is Made Of](source/04-what-the-machine-is-made-of.md)
-7. [Emil, month 11](source/04b-emil-month-11.md)
-8. [Chapter 5: Dora Builds a Website](source/05-dora-builds-a-website.md)
-9. [Emil, year 2](source/05b-emil-year-2.md)
-10. [Chapter 6: A Working Marriage](source/06-a-working-marriage.md)
-11. [Emil, year 3](source/06b-emil-year-3.md)
-12. [Afterword](source/90-afterword.md)
-13. [Reviews](source/91-reviews.md)
-
-*Thanks & Bibliography are kept in source/92-thanks.md as a personal note and are not included in the published edition.*
+In Bulgarian (Български): **https://peterkokosharov.github.io/2028-book/index.bg.html**, or `index.bg.html` here; for an e-reader, `2028.bg.epub`.
 
 ## Talk about it
 
-Comments, corrections and reviews are welcome in this repository's Discussions; typos can go to Issues.
+Comments, corrections and reviews are welcome in this repository's [Discussions](https://github.com/peterkokosharov/2028-book/discussions); typos can go to Issues.
+
+## Review it with your own model
+
+The [`review-kit/`](review-kit/) folder holds a fixed prompt and a small script, so any language model can review the book the same way; see [`review-kit/README.md`](review-kit/README.md). From this folder, `python review-kit/review_llm.py --dry-run` finds `index.html` by itself and checks the size first; you can also name the file: `python review-kit/review_llm.py index.html`. Post the review in this repository's Discussions, name the model, and say whether the run was clean (a fresh session, nothing before the book) or had prior context.
 
 ## Rebuild
 
-`python tools/build_en.py` (Python standard library only).
+`python3 tools/build_en.py` writes `index.html` and `2028.epub` from `source/` (Python standard library only). `python3 tools/build_bg.py` writes `index.bg.html` and `2028.bg.epub` from `source-bg/`.
 
 ## License
 
-Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International (CC BY-NC-SA 4.0).
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International ([CC BY-NC-SA 4.0](LICENSE)). You may read and share this work freely. You may translate and adapt it, with attribution and under the same licence. You may not sell it or use it commercially without the author's written permission.
 
-You may read, share and translate this work freely, for non-commercial use, with credit to the author, under the same licence. For any commercial use, ask the author first.
-
-© Peter Kokosharov
+(c) Peter Kokosharov

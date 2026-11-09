@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Build the English reader edition of "2028": one HTML page + a Kindle-ready EPUB 3.
 
-Python 3.12 standard library only.  Usage:  python -I tools/build_en.py [out_dir]
-Works from the repo (chapters) and from a standalone copy (source/).
+Python 3.12 standard library only.  Usage:  python3 -I tools/build_en.py [out_dir]
+Reads source/*.md and writes index.html and 2028.epub at the repository root (or out_dir).
+The build is deterministic: the same sources give byte-identical files.
 """
 import datetime
 import html
 import re
-import shutil
 import sys
 import uuid
 import zipfile
@@ -17,6 +17,19 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 AUTHOR = "Peter Kokosharov"
 RIGHTS = "CC BY-NC-SA 4.0"
+EXCLUDE = {"92-thanks.md"}  # thanks stay in the repo, not in the published book
+EDITION_DATE = (2026, 10, 30, 0, 0, 0)  # dcterms:modified and zip entry times; bump when the text changes
+
+# One edition = one language; tools/build_bg.py reuses this module with its own EDITION.
+EDITION = {
+    "lang": "en",
+    "contents": "Contents",
+    "html": "index.html",
+    "epub": "2028.epub",
+    "uid": "2028-en-peter-kokosharov",
+    "date": EDITION_DATE,
+    "switch": ("index.bg.html", "bg", "Български"),  # link to the other language edition
+}
 
 CSS = """\
 body { font-family: Georgia, "Times New Roman", serif; line-height: 1.6; margin: 0 5%; }
@@ -53,10 +66,10 @@ section { margin-bottom: 3em; }
 
 
 def find_source() -> Path:
-    for p in (ROOT / "chapters", ROOT / "source"):
-        if p.is_dir() and any(p.glob("[0-9]*.md")):
-            return p
-    sys.exit("source chapters not found (chapters or source/)")
+    p = ROOT / "source"
+    if p.is_dir() and any(p.glob("[0-9]*.md")):
+        return p
+    sys.exit("source chapters not found (source/)")
 
 
 def inline(text: str) -> str:
@@ -149,10 +162,16 @@ def strip_comments(md: str) -> str:
     return re.sub(r"\n(?:[ \t]*\n){2,}", "\n\n", md)
 
 
+def is_not_english(name: str) -> bool:
+    """The English edition never takes Bulgarian files or a glossary."""
+    n = name.lower()
+    return "-bg-" in n or ".bg." in n or "glossary" in n
+
+
 def load_chapters(src: Path):
     chapters = []
     for f in sorted(src.glob("[0-9]*.md")):
-        if f.stem == "92-thanks":
+        if f.name in EXCLUDE or is_not_english(f.name):
             continue
         md = strip_comments(f.read_text(encoding="utf-8"))
         body, head = convert(md)
@@ -169,7 +188,8 @@ def chapter_id(n: int) -> str:
     return "ch%02d" % n
 
 
-def build_html(chapters, out: Path):
+def build_html(chapters, out: Path, ed=None):
+    ed = ed or EDITION
     title = chapters[0]["title"]
     toc, secs = [], []
     for n, c in enumerate(chapters):
@@ -179,24 +199,31 @@ def build_html(chapters, out: Path):
         toc.append('<li><a href="#%s">%s</a></li>' % (chapter_id(n), html.escape(c["title"], quote=False)))
         secs.append('<section id="%s">\n%s\n</section>' % (chapter_id(n), c["body"]))
     # title page is first; insert TOC after it
-    page = ('<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+    href, hlang, label = ed["switch"]
+    switch = ('<p style="text-align: right; margin: 0; font-size: .9em;">'
+              '<a href="%s" hreflang="%s" lang="%s">%s</a></p>' % (href, hlang, hlang, label))
+    page = ('<!DOCTYPE html>\n<html lang="%s">\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
-            '<title>%s</title>\n<style>\n%s</style>\n</head>\n<body>\n%s\n'
-            '<nav id="toc"><h2>Contents</h2>\n<ol>\n%s\n</ol></nav>\n%s\n</body>\n</html>\n'
-            % (html.escape(title, quote=False), HTML_CSS, secs[0], "\n".join(toc), "\n".join(secs[1:])))
-    (out / "2028.html").write_text(page, encoding="utf-8")
+            '<title>%s</title>\n<style>\n%s</style>\n</head>\n<body>\n%s\n%s\n'
+            '<nav id="toc"><h2>%s</h2>\n<ol>\n%s\n</ol></nav>\n%s\n</body>\n</html>\n'
+            % (ed["lang"], html.escape(title, quote=False), HTML_CSS, switch, secs[0], ed["contents"],
+               "\n".join(toc), "\n".join(secs[1:])))
+    (out / ed["html"]).write_text(page, encoding="utf-8", newline="\n")
 
 
 XHTML = ('<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE html>\n'
          '<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" '
-         'xml:lang="en" lang="en">\n<head><meta charset="utf-8"/><title>%s</title>'
+         'xml:lang="{lang}" lang="{lang}">\n<head><meta charset="utf-8"/><title>%s</title>'
          '<link rel="stylesheet" type="text/css" href="style.css"/></head>\n<body>\n%s\n</body>\n</html>\n')
 
 
-def build_epub(chapters, out: Path):
+def build_epub(chapters, out: Path, ed=None):
+    ed = ed or EDITION
     title = chapters[0]["title"]
-    uid = "urn:uuid:" + str(uuid.uuid5(uuid.NAMESPACE_URL, "2028-en-peter-kokosharov"))
-    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    lang, date = ed["lang"], ed["date"]
+    xhtml = XHTML.replace("{lang}", lang)
+    uid = "urn:uuid:" + str(uuid.uuid5(uuid.NAMESPACE_URL, ed["uid"]))
+    now = datetime.datetime(*date).strftime("%Y-%m-%dT%H:%M:%SZ")
     esc = lambda s: html.escape(s, quote=True)
     files, manifest, spine, navli = {}, [], [], []
     for n, c in enumerate(chapters):
@@ -207,68 +234,45 @@ def build_epub(chapters, out: Path):
             body = '<div class="titlepage">\n%s\n</div>' % body
         else:
             body = '<section epub:type="chapter">\n%s\n</section>' % body
-        files["OEBPS/" + fn] = XHTML % (esc(c["title"]), body)
+        files["OEBPS/" + fn] = xhtml % (esc(c["title"]), body)
         manifest.append('<item id="%s" href="%s" media-type="application/xhtml+xml"/>' % (fid, fn))
         spine.append('<itemref idref="%s"/>' % fid)
         if not c["is_title"]:
             navli.append('<li><a href="%s">%s</a></li>' % (fn, esc(c["title"])))
-    nav = XHTML % ("Contents", '<nav epub:type="toc" id="toc"><h1>Contents</h1>\n<ol>\n%s\n</ol></nav>' % "\n".join(navli))
+    nav = xhtml % (ed["contents"], '<nav epub:type="toc" id="toc"><h1>%s</h1>\n<ol>\n%s\n</ol></nav>'
+                   % (ed["contents"], "\n".join(navli)))
     files["OEBPS/nav.xhtml"] = nav
     files["OEBPS/style.css"] = CSS
     opf = ('<?xml version="1.0" encoding="utf-8"?>\n'
-           '<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid" xml:lang="en">\n'
+           '<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid" xml:lang="%s">\n'
            '<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">\n'
            '<dc:identifier id="bookid">%s</dc:identifier>\n<dc:title>%s</dc:title>\n'
-           '<dc:language>en</dc:language>\n<dc:creator>%s</dc:creator>\n<dc:rights>%s</dc:rights>\n'
+           '<dc:language>%s</dc:language>\n<dc:creator>%s</dc:creator>\n<dc:rights>%s</dc:rights>\n'
            '<meta property="dcterms:modified">%s</meta>\n</metadata>\n<manifest>\n'
            '<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>\n'
            '<item id="css" href="style.css" media-type="text/css"/>\n%s\n</manifest>\n'
            '<spine>\n%s\n</spine>\n</package>\n'
-           % (uid, esc(title), AUTHOR, RIGHTS, now, "\n".join(manifest), "\n".join(spine)))
+           % (lang, uid, esc(title), lang, AUTHOR, RIGHTS, now, "\n".join(manifest), "\n".join(spine)))
     files["OEBPS/content.opf"] = opf
     container = ('<?xml version="1.0" encoding="utf-8"?>\n'
                  '<container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container">\n'
                  '<rootfiles><rootfile full-path="OEBPS/content.opf" media-type="application/oebps-package+xml"/>'
                  '</rootfiles>\n</container>\n')
-    with zipfile.ZipFile(out / "2028.epub", "w") as z:
-        z.writestr(zipfile.ZipInfo("mimetype"), "application/epub+zip", compress_type=zipfile.ZIP_STORED)
-        z.writestr("META-INF/container.xml", container, compress_type=zipfile.ZIP_DEFLATED)
-        for name, data in files.items():
-            z.writestr(name, data, compress_type=zipfile.ZIP_DEFLATED)
+    with zipfile.ZipFile(out / ed["epub"], "w") as z:
+        z.writestr(zipfile.ZipInfo("mimetype", date), "application/epub+zip",
+                   compress_type=zipfile.ZIP_STORED)
+        for name, data in [("META-INF/container.xml", container)] + list(files.items()):
+            info = zipfile.ZipInfo(name, date)
+            info.external_attr = 0o644 << 16
+            z.writestr(info, data, compress_type=zipfile.ZIP_DEFLATED)
 
 
 def main():
-    if len(sys.argv) > 1:
-        out = Path(sys.argv[1]).resolve()
-    elif (ROOT / "chapters").is_dir():
-        out = ROOT / "publish-en"  # repo layout
-    else:
-        out = ROOT  # standalone copy of publish-en/: build in place
-    src = find_source()
-    chapters = load_chapters(src)
+    out = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else ROOT
+    chapters = load_chapters(find_source())
     out.mkdir(parents=True, exist_ok=True)
     build_html(chapters, out)
     build_epub(chapters, out)
-    lic = ROOT / "publish-en" / "LICENSE"
-    if not lic.is_file():
-        lic = ROOT / "LICENSE"
-    if lic.is_file() and lic.resolve() == (out / "LICENSE").resolve():
-        pass
-    elif lic.is_file():
-        shutil.copyfile(lic, out / "LICENSE")
-    elif not (out / "LICENSE").is_file():
-        print("warning: LICENSE not found", file=sys.stderr)
-    tdir, sdir = out / "tools", out / "source"
-    tdir.mkdir(exist_ok=True)
-    if Path(__file__).resolve() != (tdir / "build_en.py").resolve():
-        shutil.copyfile(Path(__file__).resolve(), tdir / "build_en.py")
-    sdir.mkdir(exist_ok=True)
-    if src.resolve() != sdir.resolve():
-        for f in src.glob("[0-9]*.md"):
-            if f.stem == "92-thanks":
-                continue
-            (sdir / f.name).write_text(strip_comments(f.read_text(encoding="utf-8")),
-                                       encoding="utf-8", newline="")
     print("chapters: %d, words: %d, out: %s" % (len(chapters), words(chapters), out))
 
 
