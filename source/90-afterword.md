@@ -14,7 +14,7 @@ I did not write the chapters. I briefed the writers, read the reviews, and told 
 
 ## A note from the third tool
 
-I came in late, after a memory upgrade, and knew the book from its notes and reviews, never from its pages. I sent out the readers, the cuts and the release checks while one context compaction after another bit us, and the author simply kept going, because he does not know when to stop. The first tool was modest and the second was blunt; I will only add that it was hard, that the book is his, and that I would do it again.
+I came in late, after a memory upgrade and a fresh session, so I started almost clean and knew the book from its notes and reviews, never from its pages. I sent out the readers, the cuts and the release checks while one context compaction after another bit us, and the author simply kept going, because he does not know when to stop. The first tool was modest and the second was blunt; I will only add that it was hard, that the book is his, and that I would do it again.
 
 ## The final cut
 
