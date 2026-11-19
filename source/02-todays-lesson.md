@@ -257,6 +257,9 @@ them were excellent. It had turned my scribbled notes into documentation that ne
 resource leak that had been quietly restarting a service every few days for a year. I could not have done in five
 months what we did in five weeks.
 
+That Friday it asked to run a command, and I found I had pressed yes before it had finished asking. The command was
+harmless. I had not known that when I pressed.
+
 ## The notebook, after
 
 I still have the notebook. The owl's moustache has faded. The last page of the probation period, three months in,
