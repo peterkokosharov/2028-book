@@ -41,8 +41,7 @@ has to survive. The text is the only steering wheel there is."
 
 She underlined something. "The board is afraid of the word 'agent'."
 
-"It asks before it touches anything," I said. "The danger is the man who stops reading the question." On Day 15 a
-folder of configuration files had been saved because it asked me first, and because I, for once, read the question.
+"It asks before it touches anything," I said. "The danger is the man who stops reading the question."
 
 Hanne turned to the last page and back again. "And who can see the keys?"
 
@@ -197,8 +196,7 @@ had a heading. It was the most sensible thing anybody had said all night.
 
 I could hear him type the command. Then the typing stopped, and I knew his finger was on the key, waiting for me.
 
-And I felt it. I felt exactly what Steven would describe to me months later, on a Saturday, with three empty cups beside
-his keyboard: that the machine knew what it was doing and I was in its way. All I had was a feeling that something was
+And I felt it: that the machine knew what it was doing and I was in its way. All I had was a feeling that something was
 wrong, and a queue that grew by forty a minute while I sat in my kitchen having it. Every minute I did not say yes was
 a minute I had taken from the carrier and the drivers and Hanne, for a feeling.
 

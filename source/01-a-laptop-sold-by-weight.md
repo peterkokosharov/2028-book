@@ -21,6 +21,7 @@ if I did not, also fine.
 
 Once or twice a month they called us into the office, to be walked past clients and investors like something rare in
 an enclosure, proof that the company had volume; sometimes there was a hotel, and a buffet the length of a corridor. Before the food, we paid for it: a manager told us we were the best of the best, that the company had a future, that we were winning. I had heard the same speech at every job I ever had, including the ones that later thanked me for my dedication. We sat and nodded with our bodies; the rest of us was already at the prawns.
+
 One morning a colleague from the database team, camera on for once, lifted his mug to the screen and said, "Some drink
 from sorrow, others from joy — we drink from the morning." Nobody asked what was in the mug. Early in the morning, before
 the call, the bottle in the cupboard looked a slightly better decision than it had the day before. I noted that, and
@@ -142,7 +143,7 @@ forty minutes and they need four men, not eleven. New timetable. Somebody made i
 
 I could not decide, then or since, whether that was meant as comfort.
 
-Every night the list was new. Every morning it was gone and another would come, longer. I had four hundred more
+Every night the cartons were new. Every morning they were gone and more would come. I had four hundred more
 cartons, and the belt did not wait for me to finish thinking about any of it.
 
 ## A job, with a condition

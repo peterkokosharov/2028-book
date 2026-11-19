@@ -83,8 +83,7 @@ It took eleven minutes. It had been on my list for nine weeks.
 The hardest part was not code. I wrote down what worked. Not what I hoped worked: what I
 had seen work, on which machine, on which date, with which versions. It was a short list. One operating system, tested.
 One client, in a terminal. Three providers, each with a note on what I had actually tried. Everything else went under
-a heading "Not tested", which grew longer than the list above it. It was the post from
-Helsinki again: what runs, on what, and no promises.
+a heading "Not tested", which grew longer than the list above it.
 
 Then I wrote a five-minute test and put it in the repository: six commands anyone could run, with the output they
 should see, from starting the proxy to finding the call in the log with its tokens and its cost. If all six happened,
@@ -127,8 +126,7 @@ partly true, and I said which parts kiko added. Nobody replied to either.
 
 On the fifth day a pull request arrived from someone whose profile said only "Emil" and the name of a university town I
 had to look up. A computer science student, judging by the repositories: coursework, a half-finished game, a tidy tool
-that turned lecture timetables into calendar files. He worked on a second-hand Mac, he told me later, bought from a
-graduate who was leaving the country and wanted cash more than a fair price.
+that turned lecture timetables into calendar files. He worked on a second-hand Mac, he told me later.
 
 The pull request did what the issue asked and nothing else. It added a macOS section to the README. It made two small
 changes to the launcher, which had assumed things about the shell that are true on my laptop and not on a Mac. And it

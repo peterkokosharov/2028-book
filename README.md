@@ -10,7 +10,7 @@ Free to read. Not free to sell.
 
 Online: **https://peterkokosharov.github.io/2028-book/**
 
-Or open `index.html` in a browser. It is the whole book on one page: a preface, six chapters with the Emil interludes, an afterword, and reviews. For an e-reader, use `2028.epub`; on a Kindle, send it with Send to Kindle.
+Or open `index.html` in a browser. It is the whole book on one page: a preface, six chapters with the Emil interludes, and reviews. For an e-reader, use `2028.epub`; on a Kindle, send it with Send to Kindle.
 
 In Bulgarian (Български): **https://peterkokosharov.github.io/2028-book/index.bg.html**, or `index.bg.html` here; for an e-reader, `2028.bg.epub`.
 
@@ -25,6 +25,10 @@ The [`review-kit/`](review-kit/) folder holds a fixed prompt and a small script,
 ## Rebuild
 
 `python3 tools/build_en.py` writes `index.html` and `2028.epub` from `source/` (Python standard library only). `python3 tools/build_bg.py` writes `index.bg.html` and `2028.bg.epub` from `source-bg/`.
+
+## How this book was made
+
+I wrote this book with LLMs: they drafted and cut, I chose what stayed. If it reads well and is interesting, that is because of them. Sometimes I ran a visualisation. It took two weeks, between other work.
 
 ## License
 

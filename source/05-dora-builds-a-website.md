@@ -58,7 +58,7 @@ She did not look up. She was writing the price of a heel.
 
 She did not say which works, and I did not ask.
 
-"Watches," she said. "I set the movements. Under a lens, all day, with tweezers. Twelve hundred a month."
+"Watches," she said. "I set the movements. Under a lens, all day, with tweezers. Twelve hundred movements a month."
 
 "And then?"
 

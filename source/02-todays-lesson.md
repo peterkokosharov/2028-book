@@ -181,7 +181,7 @@ for a name that people spell carelessly. But MILA was not only a service. Mila w
 worked on the integration layer two years earlier, and who had the pleasant habit of signing her temporary fixes in
 comments: "Mila: workaround until the carrier updates their schema". There were sixteen of those. Sixteen of the
 forty-seven references to the service were, in fact, references to a woman who had left the company and was presumably
-living a full life somewhere, unaware that a machine had counted her as legacy infrastructure. I felt for her.
+living a full life somewhere, unaware that a machine had counted her as legacy infrastructure.
 
 The true number was thirty-one.
 

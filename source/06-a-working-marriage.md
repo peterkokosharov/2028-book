@@ -226,7 +226,7 @@ team of five who would be expected to know them by spring.
 I wrote my own estimate on one page, with three lines under it: how it was counted, what was not known, and the
 command that made it. My figure was not five.
 
-The next morning Hanne asked whether I had an answer for the board, which did not ask twice. I let her finish.
+The next morning Hanne asked whether my name would go under the plan; the board did not ask twice. I let her finish.
 
 "No," I said, at the volume I use for status meetings, and put the page on her desk.
 
