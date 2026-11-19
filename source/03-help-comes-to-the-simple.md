@@ -77,18 +77,18 @@ the only one in the project whose message I rewrote three times. In the end it s
 extras".
 
 Then the sample. It now listened on 127.0.0.1 only. The password was on, and kiko refused to start
-without one. Anyone who wanted the proxy open to a network would have to change a line on purpose, knowing what it
-meant. It took eleven minutes. It had been on my list for nine weeks.
+without one. Anyone who wanted the proxy open to a network would have to change a line on purpose.
+It took eleven minutes. It had been on my list for nine weeks.
 
 The hardest part was not code. I wrote down what worked. Not what I hoped worked: what I
 had seen work, on which machine, on which date, with which versions. It was a short list. One operating system, tested.
 One client, in a terminal. Three providers, each with a note on what I had actually tried. Everything else went under
-a heading "Not tested", which grew longer than the list above it, and that was right. It was the post from
+a heading "Not tested", which grew longer than the list above it. It was the post from
 Helsinki again: what runs, on what, and no promises.
 
 Then I wrote a five-minute test and put it in the repository: six commands anyone could run, with the output they
-should see, from starting the proxy to finding the call in the log with its tokens and its cost. If all six happened,
-it worked. If not, the step that failed told you where to look.
+should see, from starting the proxy to finding the call in the log. If a step failed,
+it told you where to look.
 
 I ran it on my laptop. Then I made a new, empty user account and followed my own README from the top, as a stranger,
 typing only what it said. It failed twice. Both times the README was wrong and the code was right. I fixed the README.
@@ -103,7 +103,7 @@ use the word "prototype". I closed the laptop and went for a walk, and walked fu
 
 Then I asked for help. Once, in the right place, in the right form.
 
-On GitHub, a project's issues are where work is described. I wrote one. Here are its bones.
+I wrote an issue on GitHub. Here are its bones.
 
 > **Help wanted: kiko with editors (VS Code, Cursor) and on macOS**
 >
