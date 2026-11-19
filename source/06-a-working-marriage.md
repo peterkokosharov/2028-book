@@ -18,7 +18,7 @@ Once they tried both at once, and it was a disaster. The body went its way, and 
 
 I thought about him a good deal in my second year, because the work had become a marriage of that kind. I wanted what the soul wanted: slow attention, and to know what was being done in my name. The machine has no wants, only needs, the way an engine has needs, and the first of them is speed, a long stream of small actions, which is the opposite of slow attention. When I let it run fast, I lost the thread. When I checked every step myself, the work doubled rather than halved.
 
-I watched colleagues take both ways out of that misery. Some went back to doing everything by hand, with great dignity, until the board began to ask why their tickets took so long. Others went the other way.
+There are two ways out of that misery, and I watched colleagues take both. Some tried the tools, hated the noise, and went back to doing everything by hand, with great dignity, until the board began to ask why their tickets took so long. Others went the other way.
 
 ## The fourth cup
 
@@ -64,7 +64,7 @@ Steven read them from the next desk, all four, with his cup in his hand. He did 
 
 I am still not sure whether I am the dispatcher in Houston or the blonde.
 
-I break them about once a month. Last month it was the six o'clock rule: a small change, approved at a quarter to
+I break the rules about once a month. Last month it was the six o'clock rule: a small change, approved at a quarter to
 eight, that put a wrong time zone into one carrier's delivery estimates for a morning. That line on the manifest is
 underlined now, in a different pen.
 
