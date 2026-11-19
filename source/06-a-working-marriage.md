@@ -16,9 +16,9 @@ There is a creature in Adams called Gargravarr, and I tell him from memory, whic
 
 Once they tried both at once, and it was a disaster. The body went its way, and the soul became a floating voice, watching. Gargravarr still loves fishing, exactly as he did before. He can only watch. Someone else holds the rod.
 
-I thought about him a good deal in my second year, because the work had become a marriage of that kind. I wanted what the soul wanted: slow attention, to understand the systems I answered for and to know what was being done in my name. The machine has no wants, but it has needs the way an engine has needs: a great deal of text, fresh every time; clear tasks; tokens; and speed, a long stream of small actions, which is the opposite of slow attention. When I let it run fast, I lost the thread. When I checked every step myself, the work doubled rather than halved.
+I thought about him a good deal in my second year, because the work had become a marriage of that kind. I wanted what the soul wanted: slow attention, and to know what was being done in my name. The machine has no wants, only needs, the way an engine has needs, and the first of them is speed. When I let it run fast, I lost the thread. When I checked every step myself, the work doubled rather than halved.
 
-There are two ways out of that misery, and I watched colleagues take both. Some tried the tools, hated the noise, and went back to doing everything by hand, with great dignity. The work kept arriving, more of it each month, and the board began to ask why their tickets took so long. Others went the other way.
+I watched colleagues take both ways out of that misery. Some went back to doing everything by hand, with great dignity, until the board began to ask why their tickets took so long. Others went the other way.
 
 ## The fourth cup
 
