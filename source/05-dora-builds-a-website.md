@@ -25,7 +25,7 @@ She laughed, which is not the same as saying no.
 
 The laptop was the one from the tyre shop, with the workshop already on it; that part needs a helper the first time.
 Everything after it, Dora did herself, four evenings at the counter after closing, the laptop balanced between a box of
-heels and a jar of keys. The steps live with the tool's own documentation. What follows is what happened.
+heels and a jar of keys.
 
 ## Evening one: the paper
 
