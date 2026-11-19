@@ -246,7 +246,7 @@ The reviewer was no oracle either. A week later it called a configuration value 
 what the vendor's documentation required, and the reviewer had confused two settings with similar names. I wrote the
 page number of the documentation in the margin of the procedure.
 
-I underlined the last line of the procedure twice: never send a number without the command that made it.
+I underlined the last line of the procedure twice.
 
 ## Day 38
 
