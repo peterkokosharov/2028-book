@@ -56,14 +56,12 @@ The reviewer thought this was news. It was not news to me. I had already paid fo
 The review ended by saying that the core idea was sound and small, and that the project's trouble was not that it did
 too little. It was that it did several things and did not know which of them it was.
 
-## A newsgroup
-
-I thought about a post I had first read as a student, written by a student. Linus Torvalds, in Helsinki, wrote to a
-newsgroup that he was making a free operating system. He said, more or less, that it was just a hobby and would not be
-big or professional. He said what ran on it already, which hardware he had, and that it probably would not work on
-anything else. He asked what people would like, and promised nothing.
-
 ## Three weeks of taking things away
+
+I thought about a post I had first read as a student, written by a student. Linus Torvalds, in Helsinki, told a
+newsgroup he was making a free operating system: just a hobby, nothing big or professional. He said what ran on it
+already, on which hardware, and that it probably would not work on anything else. He asked what people would like, and
+promised nothing.
 
 So I did not post anything. I spent three weeks of evenings making the project smaller.
 
