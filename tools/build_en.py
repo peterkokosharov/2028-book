@@ -18,7 +18,7 @@ ROOT = HERE.parent
 AUTHOR = "Peter Kokosharov"
 RIGHTS = "CC BY-NC-SA 4.0"
 EXCLUDE = {"92-thanks.md"}  # thanks stay in the repo, not in the published book
-EDITION_DATE = (2026, 10, 30, 0, 0, 0)  # dcterms:modified and zip entry times; bump when the text changes
+EDITION_DATE = (2026, 11, 19, 0, 0, 0)  # dcterms:modified and zip entry times; bump when the text changes
 
 # One edition = one language; tools/build_bg.py reuses this module with its own EDITION.
 EDITION = {
