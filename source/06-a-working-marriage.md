@@ -58,6 +58,12 @@ shipping manifest, and pinned them above my desk.
 
 *Mine:* the mornings, with no sessions open. No approvals after six.
 
+Steven read them from the next desk, all four, with his cup in his hand. He did not comment on them. He told me one instead.
+
+"Rocket, right. Goes up, gets to orbit. On board, two dogs and a blonde. Houston comes on the radio. The dispatcher: 'Rex?' 'Woof!' 'Press the green button.' Rex presses the green button. Outside, all by itself, a set of solar panels unfolds. Now they've got power. Then the dispatcher: 'Laika?' 'Woof!' 'Press the blue button.' Laika presses the blue button. Automatic, it links them up to Starlink, and the dispatcher comes up on the screen. And he says: 'Blonde?' And the blonde says: 'Woof!' 'What are you barking for? Feed the dogs and don't touch anything!'"
+
+I am still not sure whether I am the dispatcher in Houston or the blonde.
+
 I break them about once a month. Last month it was the six o'clock rule: a small change, approved at a quarter to
 eight, that put a wrong time zone into one carrier's delivery estimates for a morning. That line on the manifest is
 underlined now, in a different pen.
