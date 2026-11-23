@@ -18,7 +18,7 @@ _spec = importlib.util.spec_from_file_location("build_en", HERE / "build_en.py")
 en = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(en)
 
-EDITION_DATE = (2026, 11, 19, 0, 0, 0)  # dcterms:modified and zip entry times; bump when the text changes
+EDITION_DATE = (2026, 11, 23, 0, 0, 0)  # dcterms:modified and zip entry times; bump when the text changes
 EDITION = {
     "lang": "bg",
     "contents": "Съдържание",
