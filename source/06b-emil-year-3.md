@@ -11,9 +11,10 @@ left. He believed them. He went home and could not sleep.
 He interviewed people now, on Thursdays. Most interviews were forty-five minutes and ended on time.
 
 The applicant on that Thursday was a student, final year, in a jacket that had been bought for the occasion and did not
-yet know it. Nervous, fast, a young man who apologised at the end of his answers, where it cost nothing. On his CV,
-under "Open source", there was one line: a fix to the macOS section of a small local proxy called kiko, with the test
-output pasted into the pull request. Under "References" there was one name. Emil knew it.
+yet know it. Nervous, fast, a young man who apologised at the end of his answers, where it cost nothing. He had brought
+a laptop he did not need, as if it were a passport. On his CV, under "Open source", there was one line: a fix to the
+macOS section of a small local proxy called kiko, with the test output pasted into the pull request. Under "References"
+there was one name. Emil knew it.
 
 Emil asked the question he asked everybody, about a carrier adapter that sends a message again when the carrier does
 not answer. The student drew it on the back of his own CV, and stopped with the pen in the air.
